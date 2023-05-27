@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as MenuIcon } from "../../assets/images/menu-item.svg";
+import { ReactComponent as MenuIcon } from "../../assets/svg/menu-item.svg";
 import Button from "../variants/Button";
 
 type Props = {};

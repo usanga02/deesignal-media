@@ -1,9 +1,10 @@
-import OurWorks from "../components/basic/OurWorks";
+import OurWorks from "../components/major/OurWorks";
 import SocialsNavbar from "../components/basic/SocialsNavbar";
-import WhatOurClientsSay from "../components/basic/WhatOurClientsSay";
-import WhatWeDo from "../components/basic/WhatWeDo";
+import WhatOurClientsSay from "../components/major/WhatOurClientsSay";
+import WhatWeDo from "../components/major/WhatWeDo";
 import Hero from "../components/major/Hero";
-import Navbar from "../components/major/Navbar";
+import Navbar from "../components/basic/Navbar";
+import Blog from "../components/major/Blog";
 
 type Props = {};
 
@@ -19,6 +20,7 @@ const Home = (props: Props) => {
         <WhatWeDo />
         <OurWorks />
         <WhatOurClientsSay />
+        <Blog />
       </div>
     </div>
   );

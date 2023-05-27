@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ReactComponent as Arrow } from "../assets/images/Forward-Arrow.svg";
+import { ReactComponent as Arrow } from "../assets/svg/Forward-Arrow.svg";
 import "./AutoSlideTextCarousel.css";
 
 interface AutoSlideTextCarouselProps {
