@@ -5,6 +5,7 @@ import WhatWeDo from "../components/major/WhatWeDo";
 import Hero from "../components/major/Hero";
 import Navbar from "../components/basic/Navbar";
 import Blog from "../components/major/Blog";
+import Footer from "../components/major/Footer";
 
 type Props = {};
 
@@ -21,6 +22,7 @@ const Home = (props: Props) => {
         <OurWorks />
         <WhatOurClientsSay />
         <Blog />
+        <Footer />
       </div>
     </div>
   );
