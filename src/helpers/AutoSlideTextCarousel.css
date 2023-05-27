@@ -1,0 +1,25 @@
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  animation: slide 10s linear infinite;
+  transition: none; /* Disable the transition property */
+}
+
+.carousel-slide {
+  flex: 0 0 35%;
+  width: 100%;
+  color: white;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
