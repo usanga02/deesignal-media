@@ -6,8 +6,7 @@ type Props = {
 };
 
 const Button = ({ label, extraClass }: Props) => {
-  const classes =
-    "bg-light-primary font-lexend text-dark px-8 h-12 text-2xl" + extraClass;
+  const classes = `bg-light-primary font-lexend font-[600] text-dark h-12 text-md ${extraClass}`;
   return <button className={classes}>{label}</button>;
 };
 

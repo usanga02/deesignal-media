@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "Druk Wide Bold";
-  src: url("/src/assets/fonts/DrukWide-Super-Trial.woff2") format("woff2");
+  src: url("/src/assets/fonts/FontsFree-Net-Druk-Wide-Bold.woff")
+    format("woff2");
   font-weight: bold;
   font-style: normal;
 }

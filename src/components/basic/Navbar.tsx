@@ -9,7 +9,7 @@ const Navbar = (props: Props) => {
     <div className=" bg-transparent h-40 font-lexend font-[400] flex justify-between items-center px-32 text-light-primary">
       <div>logo</div>
       <div className="flex items-center">
-        <Button label="BOOK US" />
+        <Button extraClass="px-10" label="BOOK US" />
         <MenuIcon
           style={{
             fill: "white",
