@@ -1,5 +1,4 @@
 import React from "react";
-import CloseIcon from "@mui/icons-material/Close";
 
 type Props = {};
 
@@ -18,7 +17,6 @@ const MenuNavbar = (props: Props) => {
         <li>Twitter</li>
         <li>Facebook</li>
       </ul>
-      <CloseIcon />
     </div>
   );
 };
