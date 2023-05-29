@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx,html,css}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx,html,css}",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
+  ],
   theme: {
     screens: {
       sm: "480px",
@@ -29,5 +32,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
+  plugins: [
+    require("tailwind-scrollbar")({ nocompatible: true }),
+    require('flowbite/plugin')
+  ],
 };

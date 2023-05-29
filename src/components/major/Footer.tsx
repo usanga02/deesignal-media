@@ -16,7 +16,7 @@ const Footer = (props: Props) => {
   }, [location]);
 
   return (
-    <div className="bg-primary h-[660px] py-10 px-32 w-full">
+    <div className="bg-primary h-[660px] py-10 px-16 w-full">
       <div className="flex justify-between w-full">
         <div className="w-2/5">
           <h5 className="font-druk-wide text-light text-2xl">Socials</h5>

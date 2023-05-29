@@ -1,6 +1,5 @@
 import React from "react";
 import { ReactComponent as MenuIcon } from "../../assets/svg/menu-item.svg";
-import { ReactComponent as Logo } from "../../assets/svg/Deesignal Logo SVG 8.svg";
 import Button from "../variants/Button";
 import { useNavigate } from "react-router-dom";
 
