@@ -1,10 +1,13 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  extraClass?: string;
+};
 
-const BlogCard = (props: Props) => {
+const BlogCard = ({ extraClass }: Props) => {
+  const classes = `w-[430px] h-[500px] flex flex-col justify-between ${extraClass}`;
   return (
-    <div className="w-[430px] h-[500px] flex flex-col mr-10 justify-between">
+    <div className={classes}>
       <div className="bg-light-primary h-[247px] w-[424px]" />
       <h6 className="font-[500] text-xl">WEDDINGS</h6>
       <h6 className="font-[400] text-lg">20. 04. 2023 - PRESS</h6>

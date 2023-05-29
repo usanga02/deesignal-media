@@ -1,14 +1,20 @@
-import React from "react";
-import { ReactComponent as Quotes } from "../../assets/svg/Quotes.svg";
-import ControlsButtons from "../basic/Controls";
-import ClientComment from "../basic/ClientComment";
+import React, { useEffect } from "react";
 import Button from "../variants/Button";
 import HoverButton from "../variants/HoverButton";
 import InputField from "../variants/InputField";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const Footer = (props: Props) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to the top of the page on location change
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="bg-primary h-[660px] py-10 px-16 w-full">
       <div className="flex justify-between w-full">
@@ -54,7 +60,7 @@ const Footer = (props: Props) => {
             <InputField
               placeholder="Type in your email"
               name="subscribe"
-              extraClass="mt-3"
+              extraClass="mt-3 w-2/5"
             />
             <Button label="SUBSCRIBE" extraClass="ml-3 px-6 mt-3" />
           </div>
@@ -68,7 +74,10 @@ const Footer = (props: Props) => {
           <li className="border-r-[1px] px-6 border-light-primary border-opacity-50">
             Services
           </li>
-          <li className="border-r-[1px] px-6 border-light-primary border-opacity-50">
+          <li
+            onClick={() => navigate("/our_works")}
+            className="border-r-[1px] cursor-pointer px-6 border-light-primary border-opacity-50"
+          >
             Works
           </li>
           <li className="pl-6">Blog</li>
