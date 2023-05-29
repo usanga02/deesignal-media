@@ -5,7 +5,7 @@ type Props = {};
 
 const SearchNavbar = (props: Props) => {
   return (
-    <div className="flex w-full h-16 py-4 px-6 items-center border-[1px] border-light-primary font-lexend">
+    <div className="flex mx-32 h-16 py-4 px-6 items-center border-[1px] border-light-primary font-lexend">
       <div className="flex justify-start w-full h-full items-center text-light-primary">
         <SearchIcon className="fill-primary h-6" />
         <input

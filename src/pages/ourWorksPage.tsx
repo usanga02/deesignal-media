@@ -3,12 +3,18 @@ import Footer from "../components/major/Footer";
 import Navbar from "../components/basic/Navbar";
 import OurWorksHeader from "../components/major/OurWorksHeader";
 import BrowseOurWorks from "../components/major/BrowseOurWorks";
+import { motion as m } from "framer-motion";
 
 type Props = {};
 
 const OurWorksPage = (props: Props) => {
   return (
-    <div>
+    <m.div
+      initial={{ y: "20%" }}
+      animate={{ y: "0%" }}
+      exit={{ opacity: 1, transition: { duration: 1 } }}
+      transition={{ duration: 1 }}
+    >
       <div className="h-screen bg-primary">
         <Navbar />
         <OurWorksHeader />
@@ -17,7 +23,7 @@ const OurWorksPage = (props: Props) => {
         <BrowseOurWorks />
         <Footer />
       </div>
-    </div>
+    </m.div>
   );
 };
 
