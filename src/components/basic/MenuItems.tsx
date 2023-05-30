@@ -24,7 +24,7 @@ const MenuItems = (props: Props) => {
           </Link>
         </li>
         <li className="cursor-pointer">
-          <Link to="" className=" hover:border-b-4 border-dark-text">
+          <Link to="/book_us" className=" hover:border-b-4 border-dark-text">
             Book Us
           </Link>
         </li>

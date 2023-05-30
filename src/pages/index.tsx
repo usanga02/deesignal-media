@@ -7,16 +7,20 @@ import Navbar from "../components/basic/Navbar";
 import Blog from "../components/major/Blog";
 import Footer from "../components/major/Footer";
 import { motion as m } from "framer-motion";
+import Button from "../components/variants/Button";
+import { Link, useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const Home = (props: Props) => {
+  const navigate = useNavigate();
   return (
     <m.div
       initial={{ y: "20%" }}
       animate={{ y: "0%" }}
-      exit={{ opacity: 1, transition: { duration: 1 } }}
+      exit={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      className="absolute w-full top-0 right-0"
     >
       <div className="h-screen bg-primary">
         <Navbar />

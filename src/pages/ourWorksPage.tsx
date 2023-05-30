@@ -12,8 +12,9 @@ const OurWorksPage = (props: Props) => {
     <m.div
       initial={{ y: "20%" }}
       animate={{ y: "0%" }}
-      exit={{ opacity: 1, transition: { duration: 1 } }}
+      exit={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      className="absolute w-full top-0 right-0"
     >
       <div className="h-screen bg-primary">
         <Navbar />

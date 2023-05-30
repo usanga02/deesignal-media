@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { ReactComponent as MenuIcon } from "../../assets/svg/menu-item.svg";
 import Button from "../variants/Button";
-import { Link, useNavigate } from "react-router-dom";
-import { motion as m } from "framer-motion";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <div className=" bg-transparent h-40 font-lexend font-[400] flex justify-between items-center px-32 text-light-primary">
       <img
@@ -17,7 +17,13 @@ const Navbar = (props: Props) => {
         height={300}
       />
       <div className="flex items-center">
-        <Button extraClass="px-10" label="BOOK US" />
+        {location.pathname !== "/book_us" && (
+          <Button
+            extraClass="px-10"
+            label="BOOK US"
+            onClick={() => navigate("/book_us")}
+          />
+        )}
         <MenuIcon
           onClick={() => navigate("/menu")}
           style={{
