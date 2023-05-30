@@ -1,6 +1,8 @@
 import React from "react";
 import FormInput from "../variants/FormInput";
 import { Checkbox } from "flowbite-react";
+import FormCheckbox from "../variants/FormCheckbox";
+import FormTextArea from "../variants/FormTextArea";
 
 type Props = {};
 
@@ -33,9 +35,9 @@ const BookUsForm = (props: Props) => {
     );
   };
   return (
-    <div className="relative mt-6 p-20 border-[1px] border-dark">
+    <div className="relative mt-6 px-24 py-20 border-[1px] border-dark">
       <div className="absolute flex justify-center right-0 left-0 w-auto -top-6">
-        <h3 className="px-8 py-3 border-[1px] font-bold w-fit border-dark bg-light">
+        <h3 className="px-8 py-3 border-[1px] font-[500] w-fit border-dark bg-light">
           FILL FORM BELOW
         </h3>
       </div>
@@ -66,12 +68,30 @@ const BookUsForm = (props: Props) => {
           <FormInput name="budget" label="WHATS YOUR BUDGET? *" />
           <FormInput name="colorTheme" label="WHATS YOUR THEME/COLOR? *" />
           <FormInput name="sourceRef" label="HOW DID YOU HEAR ABOUT US?" />
-          <div className="col-span-3 flex flex-col">
-            <h4>WHAT SUPPORT DO YOU NEED FOR YOUR EVENT?</h4>
+          <div className="col-span-6 flex flex-col">
+            <h4 className="font-[500] text-dark-text">
+              WHAT SUPPORT DO YOU NEED FOR YOUR EVENT?
+            </h4>
             <p className="text-sm text-dark-text">Check boxes that apply *</p>
+            <div className="mt-5">
+              <FormCheckbox name="audio" label="Audio" />
+              <FormCheckbox name="visual" label="Visual" />
+            </div>
+          </div>
+          <div className="col-span-6">
+            <input
+              type="text"
+              name="needs"
+              className="border-0 border-b-[1px] text-dark-text focus:border-dark mb-10 mt-3 outline-none focus:ring-0 w-full placeholder:text-light-primary font-[500]"
+              placeholder="Kindly input what you need for your event here..."
+            />
+            <FormTextArea
+              name="moreDetails"
+              label="TELL US MORE ABOUT YOUR EVENT"
+            />
           </div>
         </div>
-        <button className="px-16 py-3 mt-10 border-[1px] border-dark w-fit">
+        <button className="px-16 py-3 mt-12 border-[1px] hover:text-light font-[500] hover:bg-dark border-dark w-fit">
           SUBMIT
         </button>
       </form>

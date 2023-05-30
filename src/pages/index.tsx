@@ -6,9 +6,8 @@ import Hero from "../components/major/Hero";
 import Navbar from "../components/basic/Navbar";
 import Blog from "../components/major/Blog";
 import Footer from "../components/major/Footer";
-import { motion as m } from "framer-motion";
-import Button from "../components/variants/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { AnimatePresence, motion as m } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
