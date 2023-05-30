@@ -8,9 +8,9 @@ import { TbArrowBackUp } from 'react-icons/tb'
 
 const MiddleNav = () => {
   return (
-    <div className="px-16 py-10">
+    <div className="sm:px-16 px-5 py-10">
 
-      <div className="flex justify-between">
+      <div className="flex md:flex-row flex-col justify-between md:gap-0 gap-5">
 
         <div>
           <button className="flex items-center gap-2">
@@ -19,7 +19,7 @@ const MiddleNav = () => {
           </button>
         </div>
 
-        <div className="flex gap-5">
+        <div className="flex gap-5 overflow-x-auto w-full">
           {["Wedding Films", "Documentary Filming", "Audio - Visual Support"].map((wrk, i) => (
             <button key={i} className="border-r pr-5 border-[#d3d3d3]">{wrk}</button>
           ))}
