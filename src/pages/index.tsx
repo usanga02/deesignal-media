@@ -6,13 +6,11 @@ import Hero from "../components/major/Hero";
 import Navbar from "../components/basic/Navbar";
 import Blog from "../components/major/Blog";
 import Footer from "../components/major/Footer";
-import { AnimatePresence, motion as m } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { motion as m } from "framer-motion";
 
 type Props = {};
 
 const Home = (props: Props) => {
-  const navigate = useNavigate();
   return (
     <m.div
       initial={{ y: "20%" }}

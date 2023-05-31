@@ -1,5 +1,3 @@
-import React from "react";
-import { ReactComponent as Quotes } from "../../assets/svg/Quotes.svg";
 import ControlsButtons from "../basic/Controls";
 import ClientComment from "../basic/ClientComment";
 

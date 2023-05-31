@@ -1,9 +1,10 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../variants/Button";
 
 type Props = {};
 
 const BrowseOurWorksMoreDetail = (props: Props) => {
+  const navigate = useNavigate();
   return (
     <div className="text-center">
       <div className="flex flex-col w-full items-center">
@@ -38,6 +39,7 @@ const BrowseOurWorksMoreDetail = (props: Props) => {
         <img
           className="mb-9"
           src="/Deesignal-logo-dark.png"
+          alt="deesignal logo"
           width={300}
           height={300}
         />
@@ -52,7 +54,11 @@ const BrowseOurWorksMoreDetail = (props: Props) => {
         <h5 className="text-light text-xl w-[410px] mb-10 font-druk-wide font-[700]">
           Want to capture the action? Lets Shoot.
         </h5>
-        <Button extraClass="px-10" label="BOOK US" />
+        <Button
+          onClick={() => navigate("/book_us")}
+          extraClass="px-10"
+          label="BOOK US"
+        />
       </div>
     </div>
   );

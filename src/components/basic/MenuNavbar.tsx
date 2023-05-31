@@ -1,16 +1,15 @@
-import React from "react";
 import { TfiClose } from "react-icons/tfi";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
 const MenuNavbar = (props: Props) => {
-  const navigate = useNavigate();
   return (
     <div className="flex h-40 justify-between items-center">
       <img
         className="cursor-pointer"
         src="/Deesignal-logo.png"
+        alt="deesignal logo"
         width={300}
         height={300}
       />

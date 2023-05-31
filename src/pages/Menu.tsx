@@ -1,7 +1,6 @@
-import React from "react";
 import MenuNavbar from "../components/basic/MenuNavbar";
 import MenuItems from "../components/basic/MenuItems";
-import { AnimatePresence, motion as m } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 type Props = {};
 

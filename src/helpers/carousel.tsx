@@ -41,18 +41,12 @@ const AutoSlideTextCarousel: React.FC<AutoSlideTextCarouselProps> = ({
         {texts.map((text, index) => (
           <div
             key={index}
-            className="carousel-slide items-center text-light-primary"
+            className="carousel-slide flex items-center text-light-primary"
           >
-            {text}
-            <Arrow
-              style={{
-                display: "inline",
-                height: 50,
-                width: 50,
-                paddingBottom: 10,
-                marginLeft: 56,
-              }}
-            />
+            <h2 className="flex shrink-0 text-xs sm:text-base md:text-3xl lg:text-4xl xl:text-5xl">
+              {text}
+            </h2>
+            <Arrow className="xl:ml-16 mx-3 sm:ml-6 md:ml-10 lg:ml-12" />
           </div>
         ))}
         <div className="carousel-slide">{texts[0]}</div>

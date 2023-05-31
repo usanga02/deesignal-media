@@ -1,9 +1,11 @@
 import React from "react";
 import { ReactComponent as SmallArrow } from "../../assets/svg/small-arrow.svg";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const HeroCard = (props: Props) => {
+  const navigate = useNavigate();
   return (
     <div className="h-56 w-[500px] font-lexend border-light-primary border-2 border-opacity-50">
       <div className="h-3/4 p-10">
@@ -20,7 +22,10 @@ const HeroCard = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="h-1/4 flex justify-between py-4 px-10 cursor-pointer bg-light-primary">
+      <div
+        onClick={() => navigate("/our_works")}
+        className="h-1/4 flex justify-between py-4 px-10 cursor-pointer bg-light-primary"
+      >
         <div>See Our Works</div>
         <div className="py-2">
           <SmallArrow />

@@ -17,12 +17,10 @@ const Footer = (props: Props) => {
 
   return (
     <div className="bg-primary py-10 md:px-16 px-5 w-full">
-
       <div className="flex md:flex-row flex-col gap-3 justify-between w-full">
-
         <div className="md:w-2/5">
           <h5 className="font-druk-wide text-light text-2xl">Socials</h5>
-          <div className="w-full md:mt-10">
+          <div className="md:w-5/6 md:mt-10">
             <Button label="INSTAGRAM" extraClass="mr-3 px-6 mt-3" />
             <HoverButton extraClass="mr-3 mt-3" label="YOUTUBE" />
             <HoverButton extraClass="mr-3 mt-3" label="TWITTER" />
@@ -33,22 +31,20 @@ const Footer = (props: Props) => {
 
         <div className="flex flex-col md:w-3/5 md:items-end md:mt-0 mt-10">
           <h5 className="font-druk-wide text-light text-2xl">Our Works</h5>
-          <div className="flex flex-wrap md:justify-end w-full md:mt-10">
-            <HoverButton extraClass="mr-3 mt-3" label="WEDDING FILMS" />
-            <HoverButton extraClass="mr-3 mt-3" label="LIVE EVENT STREAMING" />
-            <HoverButton extraClass="mt-3 " label="VISUAL..." />
-            <HoverButton label="DOCUMENTARY" extraClass="mr-3 mt-3" />
+          <div className="flex flex-wrap md:justify-end md:h-full w-full md:mt-10">
+            <HoverButton extraClass="ml-3 mt-3" label="WEDDING FILMS" />
+            <HoverButton extraClass="ml-3 mt-3" label="LIVE EVENT STREAMING" />
+            <HoverButton extraClass="mt-3 ml-3" label="VISUAL..." />
+            <Button label="DOCUMENTARY" extraClass="px-6 mt-3 ml-3" />
           </div>
-          <hr className="text-light-primary w-3/4 border-[1px] text-opacity-50 mt-5" />
+          <hr className="text-light-primary w-full md:w-3/4 border-[1px] text-opacity-50 mt-5" />
         </div>
-
       </div>
 
       <div className="flex md:flex-row flex-col justify-between mt-16 w-full">
-
         <div className="md:w-2/5">
           <h5 className="font-druk-wide text-light text-2xl">Contacts</h5>
-          <div className="w-full md:mt-10">
+          <div className="w-full md:mt-10 h-32">
             <Button label="SEND A MAIL" extraClass="mr-3 px-6 mt-3" />
             <InputField
               placeholder="Type in your email"
@@ -63,7 +59,7 @@ const Footer = (props: Props) => {
 
         <div className="flex flex-col md:w-3/5 md:items-end md:mt-0 mt-10">
           <h5 className="font-druk-wide text-light text-2xl">Journals</h5>
-          <div className="flex md:justify-end w-full h-32 md:mt-10">
+          <div className="md:flex md:justify-end w-full h-32 md:mt-10">
             <InputField
               placeholder="Type in your email"
               name="subscribe"
@@ -73,11 +69,9 @@ const Footer = (props: Props) => {
           </div>
           <hr className="text-light-primary w-full border-[1px] text-opacity-50 mt-5" />
         </div>
-
       </div>
 
       <div className="flex md:flex-row flex-col w-full mt-10 justify-between font-lexend text-light">
-
         <h3 className="text-xl font-druk-wide">DEESIGNAL MEDIA</h3>
 
         <h4>ALL RIGHTS RESERVED TO DEESIGNAL MEDIA 2023</h4>

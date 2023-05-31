@@ -1,7 +1,6 @@
-import React from "react";
 import BookUsHeader from "../components/major/BookUsHeader";
 import Navbar from "../components/basic/Navbar";
-import { AnimatePresence, motion as m } from "framer-motion";
+import { motion as m } from "framer-motion";
 import BookUsDetails from "../components/major/BookUsDetails";
 import BookUsForm from "../components/major/BookUsForm";
 import Footer from "../components/major/Footer";
@@ -21,7 +20,7 @@ const BookUs = (props: Props) => {
         <Navbar />
         <BookUsHeader />
       </div>
-      <div className="bg-light p-24 pt-0">
+      <div className="bg-light px-5 pb-6 md:p-24 pt-0">
         <BookUsDetails />
         <BookUsForm />
       </div>

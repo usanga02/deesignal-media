@@ -1,6 +1,3 @@
-import React from "react";
-import { ReactComponent as LightArrow } from "../../assets/svg/light-arrow.svg";
-
 type Props = {};
 
 const ControlsButtons = (props: Props) => {
