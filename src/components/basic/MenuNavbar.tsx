@@ -24,12 +24,12 @@ const MenuNavbar = (props: Props) => {
         <li className="cursor-pointer p-4">Facebook</li>
       </ul>
       <div className="w-1/6 flex justify-end">
-        <Link
-          to="/"
+        <button
+          onClick={() => navigate(-1)}
           className="p-8 hover:bg-light-primary hover:bg-opacity-10 rounded-full"
         >
           <TfiClose className="text-light-primary text-4xl" />
-        </Link>
+        </button>
       </div>
     </div>
   );

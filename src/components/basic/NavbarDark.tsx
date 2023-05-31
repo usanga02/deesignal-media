@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
-import { ReactComponent as MenuIcon } from "../../assets/svg/menu-item.svg";
+import { ReactComponent as MenuIcon } from "../../assets/svg/dark-menu.svg";
 import Button from "../variants/Button";
 import { useLocation, useNavigate } from "react-router-dom";
 
 type Props = {};
 
-const Navbar = (props: Props) => {
+const NavbarDark = (props: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
-  
   return (
-    <div className=" bg-transparent font-lexend font-[400] flex justify-between items-center md:px-16 px-5 text-light-primary">
+    <div className=" bg-transparent font-lexend font-[400] flex justify-between items-center md:px-16 px-5 text-[#000]">
       <img
         className="cursor-pointer"
-        src="/Deesignal-logo.png"
+        src="/Deesignal-logo-dark.png"
         width={300}
         height={300}
       />
@@ -28,7 +27,7 @@ const Navbar = (props: Props) => {
         <MenuIcon
           onClick={() => navigate("/menu")}
           style={{
-            fill: "white",
+            fill: "black",
             height: 70,
             width: 40,
             marginLeft: 32,
@@ -40,4 +39,4 @@ const Navbar = (props: Props) => {
   );
 };
 
-export default Navbar;
+export default NavbarDark;

@@ -8,6 +8,8 @@ import OurWorksPage from "./pages/ourWorksPage";
 import { AnimatePresence } from "framer-motion";
 import BookUs from "./pages/bookUs";
 import WhatWeDo from "./pages/whatWeDo";
+import Blog from "./pages/blog";
+import SingleBlog from "./pages/singleBlog";
 
 function App() {
   const location = useLocation();
@@ -19,6 +21,8 @@ function App() {
         <Route path="/our_works" element={<OurWorksPage />} />
         <Route path="/book_us" element={<BookUs />} />
         <Route path="/whatwedo" element={<WhatWeDo />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:blogname" element={<SingleBlog />} />
         <Route path="/work/:workname" element={<SingleWork />} />
       </Routes>
     </AnimatePresence>
