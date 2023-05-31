@@ -2,9 +2,9 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages";
-import Menu from "./pages/Menu";
 import SingleWork from "./pages/singleWork";
-import OurWorksPage from "./pages/OurWorksPage";
+import OurWorksPage from "./pages/ourWorksPage";
+import Menu from "./pages/menu";
 
 function App() {
   return (
