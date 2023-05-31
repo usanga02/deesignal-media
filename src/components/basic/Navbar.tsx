@@ -7,6 +7,7 @@ type Props = {};
 const Navbar = (props: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
+
   return (
     <div className=" bg-transparent h-32 md:h-40 font-lexend font-[400] flex justify-between items-center px-4 sm:px-8 md:px-16 lg:px-32 text-light-primary">
       <img

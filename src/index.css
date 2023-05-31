@@ -10,7 +10,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Druk_Wide_Norm";
+  src: url("/src/assets/fonts/DrukWide-Super-Trial.woff2")
+    format("woff2");
+  /* font-weight: bold; */
+  font-style: normal;
+}
+
 body {
   overflow-x: hidden;
   width: 100vw;
+  font-family: 'Lexend';
+  /* color: #00000099; */
 }
