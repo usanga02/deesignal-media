@@ -19,7 +19,7 @@ const Home = (props: Props) => {
       transition={{ duration: 1 }}
       className="absolute w-full top-0 right-0"
     >
-      <div className="h-screen bg-primary">
+      <div className="h-[800px] md:h-screen bg-primary">
         <Navbar />
         <Hero />
       </div>

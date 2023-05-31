@@ -4,8 +4,8 @@ type Props = {};
 
 const OurWorks = (props: Props) => {
   return (
-    <div className="pb-14 mt-20">
-      <h3 className="font-druk-wide text-2xl my-10 text-primary text-center">
+    <div className="pb-14 mt-10 lg:mt-20">
+      <h3 className="font-druk-wide text-lg md:text-2xl my-10 text-primary text-center">
         Our Works
       </h3>
       <div className="flex h-[80vh] px-32 py-5">

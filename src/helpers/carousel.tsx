@@ -36,12 +36,12 @@ const AutoSlideTextCarousel: React.FC<AutoSlideTextCarouselProps> = ({
   }, [currentSlide]);
 
   return (
-    <div className="carousel mt-44 font-druk-wide text-5xl">
+    <div className="carousel md:mt-14 lg:mt-44 font-druk-wide text-5xl">
       <div className="carousel-inner" ref={carouselRef}>
         {texts.map((text, index) => (
           <div
             key={index}
-            className="carousel-slide flex items-center text-light-primary"
+            className="carousel-slide flex mt-32 md:mt-0 items-center text-light-primary"
           >
             <h2 className="flex shrink-0 text-xs sm:text-base md:text-3xl lg:text-4xl xl:text-5xl">
               {text}
