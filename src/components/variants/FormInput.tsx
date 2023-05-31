@@ -10,7 +10,7 @@ const FormInput = ({ name, label, extraClass }: Props) => {
   const classes = `font-lexend text-dark-text col-span-2 ${extraClass}`;
   return (
     <div className={classes}>
-      <label htmlFor={name} className=" font-[200]">
+      <label htmlFor={name} className="font-[200]">
         {label}
       </label>
       <input
