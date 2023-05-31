@@ -1,9 +1,10 @@
 import { TfiClose } from "react-icons/tfi";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const MenuNavbar = (props: Props) => {
+  const navigate = useNavigate();
   return (
     <div className="flex h-40 justify-between items-center">
       <img

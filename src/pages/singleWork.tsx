@@ -5,6 +5,7 @@ import WorkCards from "../components/work/WorkCards";
 import Footer from "../components/major/Footer";
 import Capture from "../components/work/Capture";
 import { Pagination } from "flowbite-react";
+import { motion as m } from "framer-motion";
 
 const SingleWork = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,7 +15,13 @@ const SingleWork = () => {
   }
 
   return (
-    <section>
+    <m.section
+      initial={{ y: "20%" }}
+      animate={{ y: "0%" }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="absolute w-full top-0 right-0"
+    >
       <div className="h-[90vh] bg-primary">
         <Navbar />
 
@@ -51,7 +58,7 @@ const SingleWork = () => {
       <div>
         <Footer />
       </div>
-    </section>
+    </m.section>
   );
 };
 

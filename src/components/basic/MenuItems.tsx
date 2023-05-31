@@ -14,12 +14,12 @@ const MenuItems = (props: Props) => {
           </Link>
         </li>
         <li className="cursor-pointer">
-          <Link to="" className=" hover:border-b-4 border-dark-text">
+          <Link to="/whatwedo" className=" hover:border-b-4 border-dark-text">
             What We Do
           </Link>
         </li>
         <li className="cursor-pointer">
-          <Link to="" className=" hover:border-b-4 border-dark-text">
+          <Link to="/blog" className=" hover:border-b-4 border-dark-text">
             Blog
           </Link>
         </li>
