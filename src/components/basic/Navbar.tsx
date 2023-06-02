@@ -13,6 +13,7 @@ const Navbar = (props: Props) => {
       <img
         className="cursor-pointer md:h-12 h-8"
         alt="deesignal-logo"
+        onClick={() => navigate("/")}
         src="/Deesignal-logo.png"
       />
       <div className="flex items-center">

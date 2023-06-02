@@ -10,6 +10,7 @@ const MenuNavbar = (props: Props) => {
       <img
         className="cursor-pointer"
         src="/Deesignal-logo.png"
+        onClick={() => navigate("/")}
         alt="deesignal logo"
         width={300}
         height={300}

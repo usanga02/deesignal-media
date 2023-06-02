@@ -22,7 +22,7 @@ const Blog = () => {
       animate={{ y: "0%" }}
       exit={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="absolute w-full top-0 right-0"
+      className="absolute w-full bg-light top-0 right-0"
     >
       <div className="h-[90vh] bg-primary">
         <Navbar />

@@ -15,7 +15,7 @@ const SingleBlog = () => {
       animate={{ y: "0%" }}
       exit={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="absolute w-full top-0 right-0"
+      className="absolute w-full top-0 bg-light right-0"
     >
       <NavbarDark />
 

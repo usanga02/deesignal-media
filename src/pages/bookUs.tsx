@@ -20,7 +20,7 @@ const BookUs = (props: Props) => {
         <Navbar />
         <BookUsHeader />
       </div>
-      <div className="bg-light px-5 pb-6 md:p-24 pt-0">
+      <div className="bg-light px-5 pb-6 md:p-24 md:pt-0">
         <BookUsDetails />
         <BookUsForm />
       </div>

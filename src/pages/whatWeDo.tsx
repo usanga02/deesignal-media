@@ -15,7 +15,7 @@ const whatWeDo = () => {
       transition={{ duration: 1 }}
       className="absolute w-full top-0 right-0"
     >
-      <div className="h-[90vh] bg-primary">
+      <div className="relative h-[90vh] bg-primary">
         <Navbar />
 
         <div className="h-fit w-full flex flex-col justify-between">
@@ -24,7 +24,7 @@ const whatWeDo = () => {
             Captured By Our Lens
           </h2>
 
-          <p className="absolute bottom-24 left-[50%] text-[#ffffffb3]  text-lg -translate-x-[50%]">
+          <p className="absolute bottom-12 left-[50%] text-[#ffffffb3]  text-lg -translate-x-[50%]">
             See Our Services in Details Below
           </p>
         </div>
