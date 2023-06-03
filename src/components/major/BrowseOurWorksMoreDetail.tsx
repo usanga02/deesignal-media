@@ -38,7 +38,7 @@ const BrowseOurWorksMoreDetail = (props: Props) => {
         </p>
         <img
           className="mb-9"
-          src="/Deesignal-logo-dark.png"
+          src="/Deesignal-logo-colored.png"
           alt="deesignal logo"
           width={300}
           height={300}
@@ -50,12 +50,13 @@ const BrowseOurWorksMoreDetail = (props: Props) => {
           https://www.partyoverhererentalstx.com/gallery.php
         </a>
       </div>
-      <div className="flex flex-col items-center p-20 bg-dark">
-        <h5 className="text-light text-xl w-[410px] mb-10 font-druk-wide font-[700]">
+      <div className="flex flex-col items-center p-20 bg-moon-light">
+        <h5 className="text-night text-xl w-[410px] mb-10 font-druk-wide font-[700]">
           Want to capture the action? Lets Shoot.
         </h5>
         <Button
           onClick={() => navigate("/book_us")}
+          variant="dark"
           extraClass="px-10"
           label="BOOK US"
         />

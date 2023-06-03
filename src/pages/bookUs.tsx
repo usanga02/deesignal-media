@@ -16,7 +16,7 @@ const BookUs = (props: Props) => {
       transition={{ duration: 1 }}
       className="absolute w-full top-0 right-0"
     >
-      <div className="h-[720px] bg-primary">
+      <div className="h-[720px] bg-night">
         <Navbar />
         <BookUsHeader />
       </div>

@@ -30,7 +30,7 @@ const HeroCard = (props: Props) => {
       </div>
       <div
         onClick={() => navigate("/our_works")}
-        className="h-1/5 md:h-1/4 flex justify-between py-2 md:py-4 px-4 md:px-10 cursor-pointer bg-light-primary"
+        className="h-1/5 md:h-1/4 flex justify-between py-2 md:py-4 px-4 md:px-10 cursor-pointer bg-light"
       >
         <div>See Our Works</div>
         <div className="py-2">

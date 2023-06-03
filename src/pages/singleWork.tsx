@@ -22,7 +22,7 @@ const SingleWork = () => {
       transition={{ duration: 1 }}
       className="absolute w-full top-0 right-0"
     >
-      <div className="h-[90vh] bg-primary">
+      <div className="h-[90vh] bg-night">
         <Navbar />
 
         <div className="h-full w-full flex justify-center">

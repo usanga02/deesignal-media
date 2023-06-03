@@ -5,9 +5,9 @@ type Props = {};
 
 const WhatOurClientsSay = (props: Props) => {
   return (
-    <div className="bg-primary h-[570px] py-20 px-44 flex w-full justify-between">
+    <div className="bg-night bg-cover bg-center bg-no-repeat bg-fixed h-[570px] py-20 px-44 flex w-full justify-between">
       <div className="">
-        <h3 className="text-light-primary w-4/5 text-2xl font-druk-wide">
+        <h3 className="text-light w-4/5 text-2xl font-druk-wide">
           What Our Clients Say About Us
         </h3>
         <ClientComment

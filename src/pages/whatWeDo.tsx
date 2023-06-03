@@ -5,8 +5,11 @@ import Footer from "../components/major/Footer";
 import Category from "../components/work/Category";
 import Support from "../components/work/Support";
 import { motion as m } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
-const whatWeDo = () => {
+const WhatWeDo = () => {
+  const navigate = useNavigate();
+
   return (
     <m.section
       initial={{ y: "20%" }}
@@ -15,7 +18,7 @@ const whatWeDo = () => {
       transition={{ duration: 1 }}
       className="absolute w-full top-0 right-0"
     >
-      <div className="relative h-[90vh] bg-primary">
+      <div className="relative h-[90vh] bg-night">
         <Navbar />
 
         <div className="h-fit w-full flex flex-col justify-between">
@@ -33,7 +36,11 @@ const whatWeDo = () => {
       <section className="px-16 mt-20">
         <Category
           heading="Wedding Films"
-          description="Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet dolor. Aenean massa. Cum sociis natnatibus et magnis irturienntes, nascetur sociis natnatibus et magnisrienntes, nascetur mmodo ligulaet dolor. Aenean maa. Cum Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet dolor. Aenean massa. Cum sociis natnatibus et magnis irturienntes, nascetur sociis natnatibus et magnisrienntes, nascetur mmodo ligulaet dolor. Aenean maa. Cum"
+          description="From the tears of joy to the infectious laughter, we are committed to preserving the heartfelt moments and intimate details that make your wedding unique. 
+          At Deesignal Media, we believe that every love story deserves to be cherished and immortalized. Our dedicated team of skilled cinematographers and storytellers are here to create breathtaking wedding films that (see more…) beautifully encapsulate the essence of your special day.
+          Relive the magic, the laughter, and the overwhelming love over and over again, even after many years, with our Wedding Films Production Service. Let us create a timeless masterpiece that will be cherished for generations to come.
+          Contact us today to discuss your wedding film vision and let us bring your love story to life on the silver screen.
+          "
         />
       </section>
 
@@ -86,7 +93,10 @@ const whatWeDo = () => {
       <section className="px-16 mt-20">
         <Category
           heading="Documentary Filming"
-          description="Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet dolor. Aenean massa. Cum sociis natnatibus et magnis irturienntes, nascetur sociis natnatibus et magnisrienntes, nascetur mmodo ligulaet dolor. Aenean maa. Cum Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet dolor. Aenean massa. Cum sociis natnatibus et magnis irturienntes, nascetur sociis natnatibus et magnisrienntes, nascetur mmodo ligulaet dolor. Aenean maa. Cum"
+          description="Whether you're a lover of thought-provoking storytelling, a seeker of knowledge, or an agent of change, our documentary service will captivate your senses and expand your horizons.
+          We believe in the power of documentaries to educate, inspire, and connect people from all walks of life. With our documentary service, you can expect unparalleled authenticity, inspired change and empathy, engagement and information, as we strive to present real stories in their purest form, providing an unfiltered look into the lives and experiences of individuals and communities worldwide. 
+          Let's talk about your next documentary film as we provide all you need on your extraordinary cinematic expedition, and together, let's uncover the power of real-life stories that resonate with the world.
+          "
         />
       </section>
 
@@ -94,13 +104,18 @@ const whatWeDo = () => {
         <Support />
       </section>
 
-      <div className="bg-[#000] p-16 text-[#fff] -z-10 relative -mt-[22%]">
-        <p className="font-druk-wide font-[700] leading-relaxed text-xl">
+      <div className="bg-moon-light p-16 text-[#fff] -z-10 relative -mt-[22%]">
+        <p className="font-druk-wide font-[700] text-night leading-relaxed text-xl">
           Want to capture the action? <br />
           Lets Shoot.
         </p>
 
-        <Button label="Book Us" extraClass="px-10 mt-10" />
+        <Button
+          label="Book Us"
+          onClick={() => navigate("/book_us")}
+          variant="dark"
+          extraClass="px-10 mt-10"
+        />
       </div>
 
       <div>
@@ -110,4 +125,4 @@ const whatWeDo = () => {
   );
 };
 
-export default whatWeDo;
+export default WhatWeDo;

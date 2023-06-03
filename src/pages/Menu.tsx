@@ -11,7 +11,7 @@ const Menu = (props: Props) => {
       animate={{ x: "0%" }}
       exit={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="absolute w-full top-0 right-0 h-screen bg-primary p-32"
+      className="absolute w-full top-0 right-0 h-screen bg-night p-32"
     >
       <MenuNavbar />
       <MenuItems />

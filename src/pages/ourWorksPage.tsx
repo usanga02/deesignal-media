@@ -16,7 +16,7 @@ const OurWorksPage = (props: Props) => {
       transition={{ duration: 1 }}
       className="absolute w-full top-0 right-0"
     >
-      <div className="h-screen bg-primary">
+      <div className="h-screen bg-night">
         <Navbar />
         <OurWorksHeader />
       </div>

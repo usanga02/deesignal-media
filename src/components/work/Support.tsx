@@ -1,44 +1,60 @@
-import React from 'react'
+import React from "react";
 
 const Support = () => {
   return (
     <>
-      <h1 className='font-druk-wide text-[#00000099] text-2xl text-center mb-20'>Support</h1>
+      <h1 className="font-druk-wide text-[#00000099] text-2xl text-center mb-20">
+        Support
+      </h1>
 
-      <div className='flex gap-10'>
-
-
+      <div className="flex gap-10">
         <div>
-
           <div>
-            <h1 className='font-druk-wide text-[#00000099] text-2xl'>Audio Support</h1>
+            <h1 className="font-druk-wide text-[#00000099] text-2xl">
+              Audio Support
+            </h1>
 
-            <p className='mt-5 text-[#000000cc]'>Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet dolor.
-              Aenean massa. Cum sociis natnatibus et magnis irturienntes, nascetur sociis
-              natnatibus et magnisrienntes, nascetur mmodo ligulaet dolor. Aenean maa. Cum
-              Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet dolor.
-              Aenean massa. Cum sociis natnatibus et magnis irturienntes, nascetur sociis
-              natnatibus et magnisrienntes, nascetur mmodo ligulaet dolor. Aenean maa. Cum   </p>
+            <p className="mt-5 text-[#000000cc]">
+              Our comprehensive Audio and Visual Support services encompass
+              state-of-the-art sound systems, crystal-clear projection, dynamic
+              lighting, and cutting-edge visual effects. We meticulously tailor
+              our solutions to match your specific needs, ensuring every word is
+              heard, every image is vivid, and every moment is amplified. With
+              our experienced technicians and top-of-the-line equipment, we
+              seamlessly integrate audio and visual elements to transform your
+              venue into an unforgettable space. From professional-grade sound
+              setups that deliver clear, immersive audio, to high-resolution
+              projection systems that bring your visuals to life, we take care
+              of every detail to ensure a flawless experience.
+            </p>
           </div>
 
           <div>
-            <h1 className='font-druk-wide text-[#00000099] text-2xl mt-10'>Visual Support</h1>
+            <h1 className="font-druk-wide text-[#00000099] text-2xl mt-10">
+              Visual Support
+            </h1>
 
-            <p className='mt-5 text-[#000000cc]'>Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet dolor.
-              Aenean massa. Cum sociis natnatibus et magnis irturienntes, nascetur sociis
-              natnatibus et magnisrienntes, nascetur mmodo ligulaet dolor. Aenean maa. Cum
-              Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet dolor.
-              Aenean massa. Cum sociis natnatibus et magnis irturienntes, nascetur sociis
-              natnatibus et magnisrienntes, nascetur mmodo ligulaet dolor. Aenean maa. Cum   </p>
+            <p className="mt-5 text-[#000000cc]">
+              Deesignal Media is a leading media company specializing in video
+              coverage, live streaming, and documentary creation. With a strong
+              focus on capturing and conveying powerful stories through visual
+              mediums, Deesignal Media has established itself as a trusted name
+              in the media industry. The company's commitment to excellence,
+              innovation, and professionalism sets it apart and ensures that
+              clients receive exceptional services tailored to their unique
+              needs.
+            </p>
           </div>
-
         </div>
 
-        <img src={require("../../assets/img/rect.png")} className='z-10 relative' alt="" />
-
+        <img
+          src={require("../../assets/img/rect.png")}
+          className="z-10 relative"
+          alt=""
+        />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Support
+export default Support;

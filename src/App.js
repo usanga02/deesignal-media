@@ -10,11 +10,13 @@ import BookUs from "./pages/bookUs";
 import WhatWeDo from "./pages/whatWeDo";
 import Blog from "./pages/blog";
 import SingleBlog from "./pages/singleBlog";
+import WelcomeAnimation from "./components/major/WelcomeAnimation";
 
 function App() {
   const location = useLocation();
   return (
-    <AnimatePresence initial={false}>
+    <AnimatePresence>
+      <WelcomeAnimation />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />

@@ -24,7 +24,7 @@ const Blog = () => {
       transition={{ duration: 1 }}
       className="absolute w-full bg-light top-0 right-0"
     >
-      <div className="h-[90vh] bg-primary">
+      <div className="h-[90vh] bg-night">
         <Navbar />
 
         <div className="h-full w-full flex justify-center">
@@ -39,9 +39,9 @@ const Blog = () => {
           {["1", "1", "1", "1"].map((bloger, i) => (
             <>
               {isOdd(i) ? (
-                <BlogCard extraClass="mt-10" />
+                <BlogCard extraClass="mt-10" bgImg="bg-summer-time" />
               ) : (
-                <BlogCard key={i} />
+                <BlogCard key={i} bgImg="bg-beach-cam" />
               )}
             </>
           ))}

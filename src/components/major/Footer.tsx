@@ -16,7 +16,7 @@ const Footer = (props: Props) => {
   }, [location]);
 
   return (
-    <div className="bg-primary py-10 md:px-16 px-5 w-full">
+    <div className="bg-night py-10 md:px-16 px-5 w-full">
       <div className="flex md:flex-row flex-col gap-3 justify-between w-full">
         <div className="md:w-2/5">
           <h5 className="font-druk-wide text-light text-2xl">Socials</h5>
