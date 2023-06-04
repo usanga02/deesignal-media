@@ -7,7 +7,7 @@ const Support = () => {
         Support
       </h1>
 
-      <div className="flex gap-10">
+      <div className="flex md:flex-row flex-col gap-10">
         <div>
           <div>
             <h1 className="font-druk-wide text-[#00000099] text-2xl">
@@ -48,7 +48,7 @@ const Support = () => {
         </div>
 
         <img
-          src={require("../../assets/img/rect.png")}
+          src={require("../../assets/img/pov-male-influencer-recording-podcast-episode-camera-using-sound-equipment-studio-portrait-content-creator-talking-audience-filming-social-media-channel-vlog 1.png")}
           className="z-10 relative"
           alt=""
         />
