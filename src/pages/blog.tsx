@@ -35,13 +35,13 @@ const Blog = () => {
       </div>
 
       <section className="px-16 mt-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-x-3 gap-y-10 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-3 gap-y-10 justify-items-center">
           {["1", "1", "1", "1"].map((bloger, i) => (
             <>
               {isOdd(i) ? (
-                <BlogCard extraClass="mt-10" bgImg="bg-summer-time" />
+                <BlogCard extraClass="mt-10" key={i} bgImg="bg-summer-time" page="blog" />
               ) : (
-                <BlogCard key={i} bgImg="bg-beach-cam" />
+                <BlogCard key={i} bgImg="bg-beach-cam" page="blog" />
               )}
             </>
           ))}
