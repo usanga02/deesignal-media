@@ -2,7 +2,7 @@ import React from 'react'
 
 const WorkCards = () => {
   return (
-    <div className=' h-[450px] max-w-[300px] bg-transparent w-full'>
+    <div className=' h-[450px] md:max-w-[350px] bg-transparent w-full'>
       <div className='h-[400px] bg-[#e3e3e3]'></div>
 
       <div className='flex justify-center'>
