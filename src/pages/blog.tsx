@@ -34,8 +34,8 @@ const Blog = () => {
         </div>
       </div>
 
-      <section className="px-16 mt-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-x-3 gap-y-10 justify-items-center">
+      <section className="lg:px-16 mt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-x-3 gap-y-10 justify-items-center">
           {["1", "1", "1", "1"].map((bloger, i) => (
             <>
               {isOdd(i) ? (
