@@ -8,14 +8,14 @@ const MenuNavbar = (props: Props) => {
   return (
     <div className="flex h-40 justify-between items-center">
       <img
-        className="cursor-pointer"
+        className="cursor-pointer md:w-[300px] w-[150px]"
         src="/Deesignal-logo.png"
         onClick={() => navigate("/")}
         alt="deesignal logo"
-        width={300}
-        height={300}
+        
+        
       />
-      <ul className="flex justify-between w-1/3 h-10 items-center text-light-primary font-[500] font-lexend">
+      <ul className="md:flex hidden justify-between w-1/3 h-10 items-center text-light-primary font-[500] font-lexend">
         <li className="cursor-pointer p-4">Instagram</li>
         <hr className=" border-r-[1px] border-light-primary h-full border-opacity-50" />
         <li className="cursor-pointer p-4">Youtube</li>
