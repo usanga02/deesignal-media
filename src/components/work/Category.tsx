@@ -4,12 +4,13 @@ import React from 'react'
 type Props = {
   heading: string;
   description: string;
+  imgSrc: string
 };
 
-const Category = ({ heading, description }: Props) => {
+const Category = ({ heading, description, imgSrc }: Props) => {
   return (
-    <div className='flex gap-10 items-center'>
-      <img src={require("../../assets/img/right1.png")} alt="" />
+    <div className='flex md:flex-row flex-col gap-10 items-center'>
+      <img src={require(`../../assets/img/${imgSrc}`)} alt="" />
 
       <div>
         <h1 className='font-druk-wide text-[#00000099] text-2xl'>{heading}</h1>

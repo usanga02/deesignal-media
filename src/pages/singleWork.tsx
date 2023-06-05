@@ -7,6 +7,22 @@ import Capture from "../components/work/Capture";
 import { Pagination } from "flowbite-react";
 import { motion as m } from "framer-motion";
 
+
+const wedding_photos = [
+  {
+    "name": "IFE & BISI",
+    "image": "wedding_1.png"
+  },
+  {
+    "name": "TOSIN & DAMI",
+    "image": "wedding_2.png"
+  },
+  {
+    "name": "NGOZI & HENRY",
+    "image": "wedding_3.png"
+  }
+]
+
 const SingleWork = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -34,11 +50,12 @@ const SingleWork = () => {
 
       <MiddleNav />
 
-      <div className="flex justify-center px-16 w-full">
+      <div className="flex justify-center md:px-16 px-5 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-3 justify-items-center">
-          <WorkCards />
-          <WorkCards />
-          <WorkCards />
+          {wedding_photos.map((wedding, i) => (
+            <WorkCards data={wedding} />
+          ))}
+
         </div>
       </div>
 

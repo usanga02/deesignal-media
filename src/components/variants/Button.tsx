@@ -9,7 +9,7 @@ type Props = {
 
 const Button = ({ label, extraClass, onClick, variant, ...rest }: Props) => {
   const classes =
-    variant == "dark"
+    variant === "dark"
       ? `bg-night font-lexend font-[600] text-light h-10 md:h-12 text-md ${extraClass}`
       : `bg-light font-lexend font-[600] text-dark h-10 md:h-12 text-md ${extraClass}`;
   return (

@@ -1,13 +1,18 @@
 import React from 'react'
 
-const WorkCards = () => {
+type Props = {
+  data: any;
+};
+const WorkCards = ({ data }: Props) => {
   return (
-    <div className=' h-[450px] max-w-[300px] bg-transparent w-full'>
-      <div className='h-[400px] bg-[#e3e3e3]'></div>
+    <div className='md:max-w-[350px] bg-transparent w-full'>
+      <div className='h-[400px]'>
+        <img src={require(`../../assets/img/wedding/${data.image}`)} className='h-fit' alt="" />
+      </div>
 
       <div className='flex justify-center'>
-        <div className='border bg-[#fff] border-[#000000b3] p-3 w-[70%] -mt-6'>
-          <p className='text-center text-[000000b3]'>GLAMAROUS</p>
+        <div className='border bg-[#fff] border-[#000000b3] p-3 w-[70%] mt-12'>
+          <p className='text-center text-[000000b3]'>{data.name}</p>
         </div>
       </div>
 

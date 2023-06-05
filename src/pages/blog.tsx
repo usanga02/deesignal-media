@@ -39,9 +39,14 @@ const Blog = () => {
           {["1", "1", "1", "1"].map((bloger, i) => (
             <>
               {isOdd(i) ? (
-                <BlogCard extraClass="mt-10" bgImg="bg-summer-time" />
+                <BlogCard
+                  extraClass="mt-10"
+                  key={i}
+                  bgImg="bg-summer-time"
+                  page="blog"
+                />
               ) : (
-                <BlogCard key={i} bgImg="bg-beach-cam" />
+                <BlogCard key={i} bgImg="bg-beach-cam" page="blog" />
               )}
             </>
           ))}
