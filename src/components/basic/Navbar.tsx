@@ -14,7 +14,11 @@ const Navbar = (props: Props) => {
         className="cursor-pointer md:h-12 h-8"
         alt="deesignal-logo"
         onClick={() => navigate("/")}
-        src="/Deesignal-logo.png"
+        src={
+          location.pathname !== "/"
+            ? "/Deesignal-logo.png"
+            : "/Deesignal-logo.png"
+        }
       />
       <div className="flex items-center">
         {location.pathname !== "/book_us" && (

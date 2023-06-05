@@ -12,7 +12,7 @@ const NavbarDark = (props: Props) => {
     <div className=" bg-transparent font-lexend font-[400] mt-10 flex justify-between items-center md:px-32 px-5 text-[#000]">
       <img
         className="cursor-pointer"
-        src="/Deesignal-logo-dark.png"
+        src="/Deesignal-logo-colored.png"
         onClick={() => navigate("/")}
         width={300}
         height={300}
@@ -22,6 +22,7 @@ const NavbarDark = (props: Props) => {
           <Button
             extraClass="px-10"
             label="BOOK US"
+            variant="dark"
             onClick={() => navigate("/book_us")}
           />
         )}

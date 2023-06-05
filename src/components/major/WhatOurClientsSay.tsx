@@ -5,17 +5,18 @@ type Props = {};
 
 const WhatOurClientsSay = (props: Props) => {
   return (
-    <div className="bg-night bg-cover bg-center bg-no-repeat bg-fixed h-[570px] py-20 px-44 flex w-full justify-between">
+    <div className="bg-night bg-cover bg-center bg-no-repeat bg-fixed h-[570px] py-16 px-44 flex w-full justify-between">
       <div className="">
-        <h3 className="text-light w-4/5 text-2xl font-druk-wide">
+        <h3 className="text-light w-4/5 text-2xl leading-tight font-druk-wide">
           What Our Clients Say About Us
         </h3>
         <ClientComment
           title="The service is worth more than the price and i love it"
-          comment=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit.ean mmodo
-        ligulaet dolor. Aenean massa. Cum sociis natnatibus et magnis dis
-        parturienntes, nascetur ridiculus mus. Donec Aenean massa."
-          name="Harrison Bolaji"
+          comment=" It is a great pleasure engaging Deesignal to capture our 30th
+          Anniversary, they made it so memorable for us. The Diaspora people were so happy that they could be part of the event live,
+          picture quality was excellent, and their contributions to the event was outstanding."
+          name="Gbemisola"
+          image={require("../../assets/img/commenters/client2.png")}
         />
       </div>
       <div>
@@ -23,11 +24,12 @@ const WhatOurClientsSay = (props: Props) => {
           <ControlsButtons />
         </div>
         <ClientComment
-          title="The service is worth more than the price and i love it"
-          comment=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit.ean mmodo
-        ligulaet dolor. Aenean massa. Cum sociis natnatibus et magnis dis
-        parturienntes, nascetur ridiculus mus. Donec Aenean massa."
-          name="Tonia Jonas"
+          title="Our guests, they said it was like a movie."
+          comment="My mum can't stop watching our wedding video over and over again.
+          Every amazing moment was captured (even some that I didn't expect to see). It's
+          beautiful to be able to watch the entire event of one of my most memorable days."
+          name="Jefftah"
+          image={require("../../assets/img/commenters/client1.png")}
         />
       </div>
     </div>

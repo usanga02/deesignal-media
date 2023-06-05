@@ -7,7 +7,7 @@ type Props = {};
 
 const BrowseOurWorks = (props: Props) => {
   return (
-    <div className="pt-8">
+    <div className="pt-8 bg-light">
       <SearchNavbar />
       <BrowseOurWorksComponent />
       <BrowseOurWorksMoreDetail />

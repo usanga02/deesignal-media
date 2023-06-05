@@ -5,21 +5,20 @@ type Props = {
   extraClass?: string;
   bgImg?: string;
   page?: string;
-  blogData?: any
 };
 
-const BlogCard = ({ extraClass, bgImg, page, blogData }: Props) => {
+const BlogCard = ({ extraClass, bgImg, page }: Props) => {
   const navigate = useNavigate();
-  const location = useLocation();
+  const location = useLocation().pathname;
+  const height = location == "/" ? "h-[247px]" : "h-[400px]";
 
   const classes = `${extraClass}`;
-  const imgClass = `h-[247px] bg-cover ${bgImg}`;
+  const imgClass = `${height} bg-cover ${bgImg}`;
   return (
     <div className={classes}>
       <div className={imgClass} />
       <h6 className="font-[500] text-[14px] my-2">WEDDINGS</h6>
       <h6 className="font-[400] text-[14px]">20. 04. 2023 - PRESS</h6>
-
 
       <p className="font-[500] text-[16px] mt-2">
         It was a blast at the wedding ceremony of the year as we can say at
@@ -28,18 +27,23 @@ const BlogCard = ({ extraClass, bgImg, page, blogData }: Props) => {
       </p>
 
       {page === "blog" && (
-        <p className="text-gray-500 mt-4 font-light text-sm tracking-wide">Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet
+        <p className="text-gray-500 mt-4 font-light text-sm tracking-wide">
+          Lorem ipsum dolor sit amet, consectetpiscing elit.ean mmodo ligulaet
           dolor. Aenean massa. Cum sociis natnatibus et magnis irturienntes,
-          nascetur sociis natnatibus et magnisrienntes, nascetur mmodo
-          ligulaet dolor. Aenean maa. Cum Lorem ipsum dolor sit amet,
-          consectetpiscing elit.ean mmodo ligulaet dolor. Aenean massa.
-          Cum sociis natnatibus et magnis irturienntes, nascetur sociis
-          natnatibus et magnisrienntes, nascetur mmodo ligulaet dolor.
-          Aenean maa. Cum...</p>
+          nascetur sociis natnatibus et magnisrienntes, nascetur mmodo ligulaet
+          dolor. Aenean maa. Cum Lorem ipsum dolor sit amet, consectetpiscing
+          elit.ean mmodo ligulaet dolor. Aenean massa. Cum sociis natnatibus et
+          magnis irturienntes, nascetur sociis natnatibus et magnisrienntes,
+          nascetur mmodo ligulaet dolor. Aenean maa. Cum...
+        </p>
       )}
 
-
-      <button className="mt-5 text-gray-600 underline" onClick={() => navigate("/blog/weddings")}>Read More</button>
+      <button
+        className="mt-5 text-gray-600 underline"
+        onClick={() => navigate("/blog/weddings")}
+      >
+        Read More
+      </button>
     </div>
   );
 };

@@ -48,7 +48,10 @@ const OurWorks = (props: Props) => {
       <div className="flex flex-col justify-center">
         <div className="flex px-32 py-5 h-72">
           <div className="flex flex-col  mx-5 w-1/2 justify-center items-center">
-            <h4 className="font-druk-wide w-32 text-lg underline mt-10 cursor-pointer text-night text-center">
+            <h4
+              onClick={() => navigate("/book_us")}
+              className="font-druk-wide w-32 text-lg underline mt-10 cursor-pointer text-night text-center"
+            >
               Book Us Now
             </h4>
           </div>
