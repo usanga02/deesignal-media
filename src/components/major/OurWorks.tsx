@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const OurWorks = (props: Props) => {
+  const navigate = useNavigate();
   return (
     <div className="pb-14 mt-10 lg:mt-20">
       <h3 className="font-druk-wide text-lg md:text-2xl my-10 text-night text-center">
@@ -27,11 +29,18 @@ const OurWorks = (props: Props) => {
         </div>
         <hr className="text-light border-[1px] text-opacity-50 h-full" />
         <div className="px-5 justify-start h-full w-1/3">
-          <div className="h-full">
+          <div className="relative h-full">
             <div className=" bg-power-shooter bg-cover bg-center bg-no-repeat bg-fixed  h-2/3"></div>
             <h5 className="text-end my-3 font-bold font-lexend">
               A DAY IN IBADUN ZOO
             </h5>
+            <button
+              onClick={() => navigate("/our_works")}
+              className="absolute right-0 bottom-16 font-[600]"
+            >
+              <span className="font-bold text-2xl pr-3">→</span>
+              View All
+            </button>
           </div>
           <hr className="text-light border-[1px] text-opacity-50 mt-5" />
         </div>
