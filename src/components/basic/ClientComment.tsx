@@ -19,7 +19,7 @@ const ClientComment = ({ title, comment, name, image }: Props) => {
         {comment}
       </h6>
       <div className="flex items-center  mt-6">
-        <div className="h-14 w-14 rounded-full bg-light-primary"></div>
+        <img src={image} alt="client" className="h-14 w-14 rounded-full" />
         <h6 className="ml-5 text-light-primary font-bold">{name}</h6>
       </div>
     </div>

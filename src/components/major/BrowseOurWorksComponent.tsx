@@ -13,7 +13,10 @@ const BrowseOurWorksComponent = (props: Props) => {
       <div className="flex h-[80vh] px-32 py-5">
         <div className="px-5 justify-end h-full w-1/3">
           <div className="flex flex-col justify-end h-full">
-            <div className="relative cursor-pointer bg-cover bg-center bg-sport-broadcast bg-no-repeat bg-fixed h-2/3">
+            <div
+              onClick={() => navigate("/our_works/live_event_streaming")}
+              className="relative cursor-pointer bg-cover bg-center bg-sport-broadcast bg-no-repeat bg-fixed h-2/3"
+            >
               <h5 className="absolute -top-7 font-bold w-full font-lexend">
                 LIVE EVENT STREAMING
               </h5>
@@ -23,7 +26,10 @@ const BrowseOurWorksComponent = (props: Props) => {
         </div>
         <hr className="text-light-primary border-[1px] text-opacity-50 h-full" />
         <div className="px-5 h-full w-2/5">
-          <div className="relative cursor-pointer bg-love-story bg-cover bg-center bg-no-repeat bg-fixed h-full">
+          <div
+            onClick={() => navigate("/our_works/wedding_films")}
+            className="relative cursor-pointer bg-love-story bg-cover bg-center bg-no-repeat bg-fixed h-full"
+          >
             <h5 className="absolute w-full text-light text-end right-5 bottom-3 font-bold font-lexend">
               WEDDING FILMS
             </h5>
@@ -33,7 +39,10 @@ const BrowseOurWorksComponent = (props: Props) => {
         <hr className="text-light-primary border-[1px] text-opacity-50 h-full" />
         <div className="px-5 justify-start h-full w-1/3">
           <div className="h-full">
-            <div className="relative cursor-pointer bg-power-shooter bg-cover bg-center bg-no-repeat bg-fixed h-2/3">
+            <div
+              onClick={() => navigate("/our_works/documentary_filming")}
+              className="relative cursor-pointer bg-power-shooter bg-cover bg-center bg-no-repeat bg-fixed h-2/3"
+            >
               <h5 className="absolute w-full text-end -bottom-7 font-bold font-lexend">
                 DOCUMENTARY FILMING
               </h5>
@@ -51,7 +60,7 @@ const BrowseOurWorksComponent = (props: Props) => {
           </div>
           <hr className="text-light-primary border-[1px] text-opacity-50 h-full" />
           <div
-            onClick={() => navigate("/work/:audio_visual")}
+            onClick={() => navigate("/our_works/:audio_visual_support")}
             className="bg-sharp-shooter cursor-pointer bg-cover bg-center bg-no-repeat bg-fixed h-full w-1/2 mx-5 relative"
           >
             <h5 className="absolute text-light bottom-2 w-full text-start left-3 font-lexend font-bold">

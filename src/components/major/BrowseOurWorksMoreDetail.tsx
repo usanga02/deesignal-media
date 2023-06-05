@@ -17,11 +17,12 @@ const BrowseOurWorksMoreDetail = (props: Props) => {
           </p>
           <hr className="text-light-primary border-[1px] text-opacity-50 h-2/3 mt-4 w-[1px]" />
           <p className="w-1/2 pl-12 pr-14">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            mmodo ligulaet olor. Aenean massa. Cum Aenean massa. Lorem ipsum
-            dolor sit amet, consectetiodipiscing elit. Aenean mmodo ligulaet
-            dolor. Aenean assa. Cumnean massa. LorLorem ipsum dolor sit amet,
-            consecteoipiscing elit. Aenean.{" "}
+            At Deesignal Media, we understand the immense power of video as a
+            communication tool. Whether it's capturing memorable moments,
+            broadcasting live events, or creating thought-provoking
+            documentaries, our team of talented professionals is dedicated to
+            delivering high-quality content that engages and resonates with
+            audiences.
           </p>
         </div>
       </div>

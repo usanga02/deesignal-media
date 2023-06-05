@@ -11,6 +11,7 @@ import WhatWeDo from "./pages/whatWeDo";
 import Blog from "./pages/blog";
 import SingleBlog from "./pages/singleBlog";
 import WelcomeAnimation from "./components/major/WelcomeAnimation";
+import WorkDetails from "./pages/workDetails";
 
 function App() {
   const location = useLocation();
@@ -25,7 +26,8 @@ function App() {
         <Route path="/whatwedo" element={<WhatWeDo />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:blogname" element={<SingleBlog />} />
-        <Route path="/work/:workname" element={<SingleWork />} />
+        <Route path="/our_works/:workname" element={<SingleWork />} />
+        <Route path="/our_works/:workname/details" element={<WorkDetails />} />
       </Routes>
     </AnimatePresence>
   );
