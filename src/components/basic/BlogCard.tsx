@@ -4,10 +4,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 type Props = {
   extraClass?: string;
   bgImg?: string;
-  page?: string
+  page?: string;
+  blogData?: any
 };
 
-const BlogCard = ({ extraClass, bgImg, page }: Props) => {
+const BlogCard = ({ extraClass, bgImg, page, blogData }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
 

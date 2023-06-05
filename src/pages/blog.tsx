@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/basic/Navbar";
 import Footer from "../components/major/Footer";
 import BlogCard from "../components/basic/BlogCard";
-import { Pagination } from "flowbite-react";
+import { Pagination, Spinner } from "flowbite-react";
 import { motion as m } from "framer-motion";
+import { AppService } from "../services/app.service";
+
 
 const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [blogList, setBlogList] = useState(null)
+  const appService = new AppService()
 
   function paginate() {
     setCurrentPage(2);
@@ -15,6 +19,24 @@ const Blog = () => {
   function isOdd(number: any) {
     return number % 2 !== 0;
   }
+
+  useEffect(() => {
+    const getAllBlogs = async () => {
+      const response = await appService.getBlogs();
+
+      if (response.status === 0) {
+        console.log(response, "error message")
+      } else {
+        console.log(response)
+      }
+
+    }
+
+    getAllBlogs()
+
+  }, [])
+
+
 
   return (
     <m.section
@@ -36,15 +58,26 @@ const Blog = () => {
 
       <section className="px-16 mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-3 gap-y-10 justify-items-center">
-          {["1", "1", "1", "1"].map((bloger, i) => (
+          {blogList ? (
+            <><p>jdj</p></>
+            // <>
+            //   {blogList.map((bloger, i) => (
+            //     <>
+            //       {isOdd(i) ? (
+            //         <BlogCard extraClass="mt-10" key={i} bgImg="bg-summer-time" page="blog" />
+            //       ) : (
+            //         <BlogCard key={i} bgImg="bg-beach-cam" page="blog" />
+            //       )}
+            //     </>
+            //   ))}
+            // </>
+
+          ) : (
             <>
-              {isOdd(i) ? (
-                <BlogCard extraClass="mt-10" key={i} bgImg="bg-summer-time" page="blog" />
-              ) : (
-                <BlogCard key={i} bgImg="bg-beach-cam" page="blog" />
-              )}
+              <Spinner size="lg" />
             </>
-          ))}
+          )}
+
         </div>
       </section>
 
