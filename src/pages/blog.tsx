@@ -26,6 +26,7 @@ const Blog = () => {
       if (response.status === 0) {
         console.log(response, "error message");
       } else {
+        console.log(response)
         setBlogList(response);
       }
     };
@@ -53,7 +54,7 @@ const Blog = () => {
 
       <section className="lg:px-16 mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-x-20 gap-y-10 justify-items-center">
-          {blogList.map((blog, i) => (
+          {blogList && blogList.map((blog, i) => (
             <>
               {isOdd(i) ? (
                 <BlogCard extraClass="mt-10" key={i} data={blog} page="blog" />

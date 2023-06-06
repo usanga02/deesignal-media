@@ -9,13 +9,13 @@ type Props = {
 };
 
 const BlogCard = ({ extraClass, data, page }: Props) => {
+
   const { setBlog } = useAuth() || {};
   const navigate = useNavigate();
   const location = useLocation().pathname;
   const height = location == "/" ? "h-[247px]" : "h-[400px]";
-  const img = `https://drive.google.com/uc?export=view&id=${
-    data.imgUrl.match(/\/d\/([^/]+)\//)[1]
-  }`;
+  const img = `https://drive.google.com/uc?export=view&id=${data.imgUrl.match(/\/d\/([^/]+)\//)[1]
+    }`;
 
   function shortenParagraph(paragraph: string) {
     const words = paragraph.split(" ");
