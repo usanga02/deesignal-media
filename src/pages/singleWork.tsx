@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/basic/Navbar";
 import MiddleNav from "../components/work/MiddleNav";
 import WorkCards from "../components/work/WorkCards";
@@ -7,6 +7,7 @@ import Capture from "../components/work/Capture";
 import { Pagination } from "flowbite-react";
 import { motion as m } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { AppService } from "../services/app.service";
 
 const wedding_photos = [
   {
@@ -50,6 +51,34 @@ const wedding_photos = [
 const SingleWork = () => {
   const location = useLocation().pathname;
   const [currentPage, setCurrentPage] = useState(1);
+  const appService = new AppService();
+  const [works, setWorks] = useState([]);
+
+  const getCategory = () => {
+    const match = location.match(/\/([^/]+)$/);
+    if (match && match.length > 1) {
+      return match[1]
+        .split("_")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+    } else {
+      return "";
+    }
+  };
+
+  useEffect(() => {
+    const getAllBlogs = async () => {
+      const response = await appService.getWorks(getCategory());
+
+      if (response.status === 0) {
+        console.log(response, "error message");
+      } else {
+        setWorks(response);
+      }
+    };
+
+    getAllBlogs();
+  }, []);
 
   function paginate() {
     setCurrentPage(2);
@@ -83,7 +112,7 @@ const SingleWork = () => {
 
       <div className="flex justify-center md:px-16 px-5 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-3 justify-items-center">
-          {wedding_photos.map((wedding, i) => (
+          {works.map((wedding, i) => (
             <WorkCards
               data={wedding}
               extraClass={i == 1 || i == 4 || i == 7 ? "mt-20" : "mt-5"}

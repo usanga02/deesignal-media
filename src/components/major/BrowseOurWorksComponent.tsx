@@ -60,7 +60,7 @@ const BrowseOurWorksComponent = (props: Props) => {
           </div>
           <hr className="text-light-primary border-[1px] text-opacity-50 h-full" />
           <div
-            onClick={() => navigate("/our_works/:audio_visual_support")}
+            onClick={() => navigate("/our_works/audio_-_visual_support")}
             className="bg-sharp-shooter cursor-pointer bg-cover bg-center bg-no-repeat bg-fixed h-full w-1/2 mx-5 relative"
           >
             <h5 className="absolute text-light bottom-2 w-full text-start left-3 font-lexend font-bold">
