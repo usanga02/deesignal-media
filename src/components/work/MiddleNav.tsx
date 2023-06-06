@@ -11,7 +11,7 @@ const MiddleNav = () => {
   const navigate = useNavigate();
   return (
     <div className="w-full sm:px-16 px-5 py-10">
-      <div className="flex md:flex-row flex-col justify-between md:justify-start md:gap-0 gap-5">
+      <div className="flex md:flex-row flex-col justify-between px-16 md:justify-start md:gap-0 gap-5">
         <div className="w-1/4">
           <button
             onClick={() => navigate("/our_works")}

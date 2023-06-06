@@ -6,11 +6,10 @@ import { Pagination, Spinner } from "flowbite-react";
 import { motion as m } from "framer-motion";
 import { AppService } from "../services/app.service";
 
-
 const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [blogList, setBlogList] = useState(null)
-  const appService = new AppService()
+  const [blogList, setBlogList] = useState([]);
+  const appService = new AppService();
 
   function paginate() {
     setCurrentPage(2);
@@ -25,18 +24,14 @@ const Blog = () => {
       const response = await appService.getBlogs();
 
       if (response.status === 0) {
-        console.log(response, "error message")
+        console.log(response, "error message");
       } else {
-        console.log(response)
+        setBlogList(response);
       }
+    };
 
-    }
-
-    getAllBlogs()
-
-  }, [])
-
-
+    getAllBlogs();
+  }, []);
 
   return (
     <m.section
@@ -58,21 +53,15 @@ const Blog = () => {
 
       <section className="lg:px-16 mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-x-20 gap-y-10 justify-items-center">
-          {["1", "1", "1", "1"].map((bloger, i) => (
+          {blogList.map((blog, i) => (
             <>
               {isOdd(i) ? (
-                <BlogCard
-                  extraClass="mt-10"
-                  key={i}
-                  bgImg="bg-summer-time"
-                  page="blog"
-                />
+                <BlogCard extraClass="mt-10" key={i} data={blog} page="blog" />
               ) : (
-                <BlogCard key={i} bgImg="bg-beach-cam" page="blog" />
+                <BlogCard data={blog} key={i} page="blog" />
               )}
             </>
           ))}
-
         </div>
       </section>
 

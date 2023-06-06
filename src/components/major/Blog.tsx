@@ -1,19 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BlogCard from "../basic/BlogCard";
+import { AppService } from "../../services/app.service";
 
 type Props = {};
 
 const Blog = (props: Props) => {
+  const appService = new AppService();
+  const [blogList, setBlogList] = useState([]);
+
+  useEffect(() => {
+    const getAllBlogs = async () => {
+      const response = await appService.getBlogs();
+
+      if (response.status === 0) {
+        console.log(response, "error message");
+      } else {
+        setBlogList(response);
+      }
+    };
+
+    getAllBlogs();
+  }, []);
+
   return (
     <div className="overflow-hidden h-screen pr-0 p-32 pt-24">
       <h3 className="font-druk-wide text-3xl">Blog</h3>
       <div className="relative w-full">
         <div className="absolute w-full overflow-x-scroll scrollbar scrollbar-thumb-night scrollbar-track-light-primary scrollbar-w-[10px] scrollbar-h-2  pt-5 pb-10 flex justify-between mt-10">
-          <BlogCard extraClass=" mr-10" bgImg="bg-summer-time" />
-          <BlogCard extraClass=" mr-10" bgImg="bg-beach-cam" />
-          <BlogCard extraClass=" mr-10" bgImg="bg-summer-time" />
-          <BlogCard extraClass=" mr-10" bgImg="bg-beach-cam" />
-          <BlogCard extraClass="" bgImg="bg-summer-time" />
+          {blogList.map((blog, i) => (
+            <BlogCard data={blog} extraClass=" mr-10" />
+          ))}
         </div>
       </div>
     </div>

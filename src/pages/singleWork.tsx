@@ -107,31 +107,32 @@ const SingleWork = () => {
           </h2>
         </div>
       </div>
+      <div className="bg-light">
+        <MiddleNav />
 
-      <MiddleNav />
-
-      <div className="flex justify-center md:px-16 px-5 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-3 justify-items-center">
-          {works.map((wedding, i) => (
-            <WorkCards
-              data={wedding}
-              extraClass={i === 1 || i === 4 || i === 7 ? "mt-20" : "mt-5"}
-            />
-          ))}
+        <div className="flex justify-center md:px-16 px-5 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-3 justify-items-center">
+            {works.map((wedding, i) => (
+              <WorkCards
+                data={wedding}
+                extraClass={i === 1 || i === 4 || i === 7 ? "mt-20" : "mt-5"}
+              />
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div className="flex justify-center mt-10">
-        <Pagination
-          currentPage={currentPage}
-          onPageChange={paginate}
-          showIcons
-          totalPages={100}
-        />
-      </div>
+        <div className="flex justify-center mt-10">
+          <Pagination
+            currentPage={currentPage}
+            onPageChange={paginate}
+            showIcons
+            totalPages={100}
+          />
+        </div>
 
-      <div className="mt-20">
-        <Capture />
+        <div className="mt-20">
+          <Capture />
+        </div>
       </div>
 
       <div>

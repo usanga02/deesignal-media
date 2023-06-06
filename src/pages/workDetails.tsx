@@ -33,9 +33,10 @@ const WorkDetails = (props: Props) => {
         <WorkGallery />
 
         <div className="mt-10 flex justify-center">
-          <a href="#" target="_blank" className="underline text-center">SEE MORE ON INSTAGRAM</a>
+          <a href="" target="_blank" className="underline text-center">
+            SEE MORE ON INSTAGRAM
+          </a>
         </div>
-
       </div>
 
       <div className="mt-10">
@@ -43,7 +44,6 @@ const WorkDetails = (props: Props) => {
       </div>
 
       <Footer />
-
     </m.section>
   );
 };
