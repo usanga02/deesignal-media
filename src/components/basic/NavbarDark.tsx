@@ -9,7 +9,7 @@ const NavbarDark = (props: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
   return (
-    <div className=" bg-transparent font-lexend font-[400] mt-10 flex justify-between items-center md:px-32 px-5 text-[#000]">
+    <div className=" bg-transparent font-lexend font-[400] mt-10 flex justify-between items-center md:px-16 px-5 text-[#000]">
       <img
         className="cursor-pointer"
         src="/Deesignal-logo-colored.png"

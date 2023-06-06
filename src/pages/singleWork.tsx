@@ -97,11 +97,11 @@ const SingleWork = () => {
 
         <div className="h-full w-full flex justify-center">
           <h2 className="text-light font-druk-wide mt-44 font-[700] leading-relaxed text-5xl text-center">
-            {location == "/our_works/live_event_streaming"
+            {location === "/our_works/live_event_streaming"
               ? "Live Event Streaming"
-              : location == "/our_works/wedding_films"
+              : location === "/our_works/wedding_films"
               ? "Wedding Films"
-              : location == "/our_works/documentary_filming"
+              : location === "/our_works/documentary_filming"
               ? "Documentary Filming"
               : "Audio - Visual Support"}
           </h2>
@@ -115,7 +115,7 @@ const SingleWork = () => {
           {works.map((wedding, i) => (
             <WorkCards
               data={wedding}
-              extraClass={i == 1 || i == 4 || i == 7 ? "mt-20" : "mt-5"}
+              extraClass={i === 1 || i === 4 || i === 7 ? "mt-20" : "mt-5"}
             />
           ))}
         </div>
