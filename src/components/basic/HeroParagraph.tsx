@@ -4,8 +4,8 @@ type Props = {};
 
 const HeroParagraph = (props: Props) => {
   return (
-    <div className="text-light-primary mt-14 md:mt-5 lg:ml-4 xl:ml-0 lg:mt-0 h-56 md:h-32 lg:h-56 w-[300px] sm:w-[360px] md:w-[480px] lg:w-[440px] text-justify flex flex-col justify-between font-lexend">
-      <div className="md:text-lg text-sm sm:text-base">
+    <div className="text-white lg:mt-0 md:h-32 w-[300px] sm:w-[360px] md:w-[480px] lg:w-[440px] text-justify flex flex-col justify-between font-lexend">
+      <div className="text-sm">
         Deesignal Media is a leading media company specializing in video
         coverage, live streaming, and documentary creation. With a strong focus
         on capturing and conveying powerful stories through visual mediums,
