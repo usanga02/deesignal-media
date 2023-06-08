@@ -12,17 +12,40 @@ const MenuNavbar = (props: Props) => {
         src="/Deesignal-logo.png"
         onClick={() => navigate("/")}
         alt="deesignal logo"
-        
-        
       />
       <ul className="md:flex hidden justify-between w-1/3 h-10 items-center text-light-primary font-[500] font-lexend">
-        <li className="cursor-pointer p-4">Instagram</li>
+        <li className="cursor-pointer p-4">
+          <a
+            href="https://instagram.com/deesignalmedia?igshid=NTc4MTIwNjQ2YQ=="
+            target="_blank"
+          >
+            Instagram
+          </a>
+        </li>
         <hr className=" border-r-[1px] border-light-primary h-full border-opacity-50" />
-        <li className="cursor-pointer p-4">Youtube</li>
+        <li className="cursor-pointer p-4">
+          <a
+            href="https://www.linkedin.com/company/deesignal-media/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </li>
         <hr className=" border-r-[1px] border-light-primary h-full border-opacity-50" />
-        <li className="cursor-pointer p-4">Twitter</li>
+        <li className="cursor-pointer p-4">
+          <a href="https://twitter.com/Deesignal_sc" target="_blank">
+            Twitter
+          </a>
+        </li>
         <hr className=" border-r-[1px] border-light-primary h-full border-opacity-50" />
-        <li className="cursor-pointer p-4">Facebook</li>
+        <li className="cursor-pointer p-4">
+          <a
+            href="https://www.facebook.com/profile.php?id=100092455375711"
+            target="_blank"
+          >
+            Facebook
+          </a>
+        </li>
       </ul>
       <div className="w-1/6 flex justify-end">
         <button

@@ -5,7 +5,7 @@ type Props = {};
 
 const WhatOurClientsSay = (props: Props) => {
   return (
-    <div className="bg-night bg-cover bg-center bg-no-repeat bg-fixed h-[570px] py-16 px-44 flex w-full justify-between">
+    <div className="bg-night h-[570px] py-16 px-28 xl:px-44 flex w-full justify-between">
       <div className="">
         <h3 className="text-light w-4/5 text-2xl leading-tight font-druk-wide">
           What Our Clients Say About Us
@@ -16,7 +16,7 @@ const WhatOurClientsSay = (props: Props) => {
           Anniversary, they made it so memorable for us. The Diaspora people were so happy that they could be part of the event live,
           picture quality was excellent, and their contributions to the event was outstanding."
           name="Gbemisola"
-          image={require("../../assets/img/commenters/client2.png")}
+          image="https://drive.google.com/uc?export=view&id=1MVR47Jc90sx45FpUpp13qW4Vw9qle1BI"
         />
       </div>
       <div>
@@ -29,7 +29,7 @@ const WhatOurClientsSay = (props: Props) => {
           Every amazing moment was captured (even some that I didn't expect to see). It's
           beautiful to be able to watch the entire event of one of my most memorable days."
           name="Jefftah"
-          image={require("../../assets/img/commenters/client1.png")}
+          image="https://drive.google.com/uc?export=view&id=1MMUV0GYHdQU8KlmfhcZV31lJT89xcm7w"
         />
       </div>
     </div>

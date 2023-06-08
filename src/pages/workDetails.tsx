@@ -33,7 +33,11 @@ const WorkDetails = (props: Props) => {
         <WorkGallery />
 
         <div className="mt-10 flex justify-center">
-          <a href="" target="_blank" className="underline text-center">
+          <a
+            href="https://instagram.com/deesignalmedia?igshid=NTc4MTIwNjQ2YQ=="
+            target="_blank"
+            className="underline text-center"
+          >
             SEE MORE ON INSTAGRAM
           </a>
         </div>

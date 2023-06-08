@@ -34,7 +34,12 @@ const BlogCard = ({ extraClass, data, page }: Props) => {
   const imgClass = `${height} object-cover object-center`;
   return (
     <div className={classes}>
-      <img src={img} width={600} alt="drive image" className={imgClass} />
+      <img
+        src={img}
+        width={location === "/blog" ? 800 : 600}
+        alt="drive image"
+        className={imgClass}
+      />
       <h6 className="font-[500] text-[14px] my-2 uppercase">
         {data && data.title}
       </h6>

@@ -17,7 +17,7 @@ const Navbar = (props: Props) => {
         src={
           location.pathname !== "/"
             ? "/Deesignal-logo.png"
-            : "/Deesignal-logo.png"
+            : "/Deesignal-logo-colored.png"
         }
       />
       <div className="flex items-center">

@@ -28,7 +28,19 @@ const Blog = (props: Props) => {
       <div className="relative w-full">
         <div className="absolute w-full overflow-x-scroll scrollbar scrollbar-thumb-night scrollbar-track-light-primary scrollbar-w-[10px] scrollbar-h-2  pt-5 pb-10 flex justify-between mt-10">
           {blogList.map((blog, i) => (
-            <BlogCard data={blog} extraClass=" mr-10" />
+            <BlogCard
+              data={blog}
+              extraClass="flex flex-col min-w-[424px] mr-10"
+            />
+          ))}
+          {blogList.map((blog, i) => (
+            <BlogCard data={blog} extraClass=" mr-10  min-w-[424px]" />
+          ))}
+          {blogList.map((blog, i) => (
+            <BlogCard data={blog} extraClass=" mr-10  min-w-[424px]" />
+          ))}
+          {blogList.map((blog, i) => (
+            <BlogCard data={blog} extraClass=" mr-10  min-w-[424px]" />
           ))}
         </div>
       </div>

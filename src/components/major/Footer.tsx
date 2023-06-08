@@ -3,6 +3,8 @@ import Button from "../variants/Button";
 import HoverButton from "../variants/HoverButton";
 import InputField from "../variants/InputField";
 import { useLocation, useNavigate } from "react-router-dom";
+import HoverLink from "../variants/HoverLink";
+import Link from "../variants/Link";
 
 type Props = {};
 
@@ -21,10 +23,30 @@ const Footer = (props: Props) => {
         <div className="md:w-2/5">
           <h5 className="font-druk-wide text-light text-2xl">Socials</h5>
           <div className="md:w-5/6 md:mt-10">
-            <Button label="INSTAGRAM" extraClass="mr-3 px-6 mt-3" />
-            <HoverButton extraClass="mr-3 mt-3" label="YOUTUBE" />
-            <HoverButton extraClass="mr-3 mt-3" label="TWITTER" />
-            <HoverButton extraClass="mr-3 mt-3 " label="FACEBOOK" />
+            <div className="pb-5 pt-6">
+              <Link
+                href="https://instagram.com/deesignalmedia?igshid=NTc4MTIwNjQ2YQ=="
+                label="INSTAGRAM"
+                extraClass="mr-3 px-6 mt-3"
+              />
+              <HoverLink
+                href="https://www.linkedin.com/company/deesignal-media/"
+                extraClass="mr-3 mt-3"
+                label="LINKEDIN"
+              />
+              <HoverLink
+                href="https://twitter.com/Deesignal_sc"
+                extraClass="mr-3 mt-3"
+                label="TWITTER"
+              />
+            </div>
+            <div className="pt-5 pb-3">
+              <HoverLink
+                href="https://www.facebook.com/profile.php?id=100092455375711"
+                extraClass="mr-3 mt-3 "
+                label="FACEBOOK"
+              />
+            </div>
           </div>
           <hr className="text-light-primary border-[1px] text-opacity-50 mt-5" />
         </div>
@@ -32,10 +54,26 @@ const Footer = (props: Props) => {
         <div className="flex flex-col md:w-3/5 md:items-end md:mt-0 mt-10">
           <h5 className="font-druk-wide text-light text-2xl">Our Works</h5>
           <div className="flex flex-wrap md:justify-end md:h-full w-full md:mt-10">
-            <HoverButton extraClass="ml-3 mt-3" label="WEDDING FILMS" />
-            <HoverButton extraClass="ml-3 mt-3" label="LIVE EVENT STREAMING" />
-            <HoverButton extraClass="mt-3 ml-3" label="VISUAL..." />
-            <Button label="DOCUMENTARY" extraClass="px-6 mt-3 ml-3" />
+            <HoverButton
+              onClick={() => navigate("/our_works/wedding_films")}
+              extraClass="ml-3 mt-3"
+              label="WEDDING FILMS"
+            />
+            <HoverButton
+              onClick={() => navigate("/our_works/live_event_streaming")}
+              extraClass="ml-3 mt-3"
+              label="LIVE EVENT STREAMING"
+            />
+            <HoverButton
+              onClick={() => navigate("/our_works/audio_-_visual_support")}
+              extraClass="mt-3 ml-3"
+              label="VISUAL..."
+            />
+            <Button
+              onClick={() => navigate("/our_works/documentary_filming")}
+              label="DOCUMENTARY"
+              extraClass="px-6 mt-3 ml-3"
+            />
           </div>
           <hr className="text-light-primary w-full md:w-3/4 border-[1px] text-opacity-50 mt-5" />
         </div>
@@ -71,9 +109,12 @@ const Footer = (props: Props) => {
         </div>
       </div>
 
-      <div className="flex md:flex-row flex-col w-full mt-10 justify-between font-lexend text-light">
-        <h3 className="text-xl font-druk-wide">DEESIGNAL MEDIA</h3>
-
+      <div className="flex lg:flex-row flex-col items-center w-full mt-10 justify-between font-lexend text-light">
+        <img
+          className="h-10"
+          alt="deesignal-logo"
+          src={"/Deesignal-logo.png"}
+        />
         <h4>ALL RIGHTS RESERVED TO DEESIGNAL MEDIA 2023</h4>
 
         <ul className="md:flex hidden">
@@ -86,7 +127,9 @@ const Footer = (props: Props) => {
           >
             Works
           </li>
-          <li className="pl-6">Blog</li>
+          <li onClick={() => navigate("/blog")} className="pl-6 cursor-pointer">
+            Blog
+          </li>
         </ul>
       </div>
     </div>
