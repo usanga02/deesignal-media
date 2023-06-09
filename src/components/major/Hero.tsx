@@ -16,7 +16,7 @@ const Hero = (props: Props) => {
   return (
     <div>
       <AutoSlideTextCarousel texts={texts} interval={2000} />
-      <div className="md:p-0 sm:p-0 lg:p-32 lg:pb-0 sm:pb-0 mt-10 pb-0 md:pb-0 flex flex-col lg:flex-row items-center justify-between">
+      <div className="lg:p-32 gap-5 pb-0 md:pb-0 flex flex-col lg:flex-row items-center justify-between">
         <HeroCard />
         <HeroParagraph />
       </div>

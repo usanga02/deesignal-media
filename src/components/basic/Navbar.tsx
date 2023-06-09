@@ -9,7 +9,7 @@ const Navbar = (props: Props) => {
   const location = useLocation();
 
   return (
-    <div className=" bg-transparent h-32 md:h-40 font-lexend font-[400] flex justify-between items-center px-4 sm:px-8 md:px-16 lg:px-32 text-light-primary">
+    <div className=" bg-transparent h-32 md:h-40 font-lexend font-[400] flex justify-between items-center px-5 md:px-16 text-light-primary">
       <img
         className="cursor-pointer md:h-12 h-8"
         alt="deesignal-logo"

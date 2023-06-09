@@ -5,11 +5,17 @@ type Props = {};
 
 const WhatOurClientsSay = (props: Props) => {
   return (
-    <div className="bg-night h-[570px] py-16 px-28 xl:px-44 flex w-full justify-between">
-      <div className="">
+    <div className="bg-night bg-cover bg-center bg-no-repeat bg-fixed h-[570px] py-16 xl:px-44 md:px-16 px-5 w-full">
+      <div className="flex justify-between">
         <h3 className="text-light w-4/5 text-2xl leading-tight font-druk-wide">
           What Our Clients Say About Us
         </h3>
+
+        <div className="w-full flex justify-end">
+          <ControlsButtons />
+        </div>
+      </div>
+      <div className="flex justify-around overflow-x-auto">
         <ClientComment
           title="The service is worth more than the price and i love it"
           comment=" It is a great pleasure engaging Deesignal to capture our 30th
@@ -18,11 +24,6 @@ const WhatOurClientsSay = (props: Props) => {
           name="Gbemisola"
           image="https://drive.google.com/uc?export=view&id=1MVR47Jc90sx45FpUpp13qW4Vw9qle1BI"
         />
-      </div>
-      <div>
-        <div className="w-full flex justify-end">
-          <ControlsButtons />
-        </div>
         <ClientComment
           title="Our guests, they said it was like a movie."
           comment="My mum can't stop watching our wedding video over and over again.

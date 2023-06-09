@@ -26,7 +26,7 @@ const Blog = (props: Props) => {
     <div className="overflow-hidden h-screen pr-0 p-32 pt-24">
       <h3 className="font-druk-wide text-3xl">Blog</h3>
       <div className="relative w-full">
-        <div className="absolute w-full overflow-x-scroll scrollbar scrollbar-thumb-night scrollbar-track-light-primary scrollbar-w-[10px] scrollbar-h-2  pt-5 pb-10 flex justify-between mt-10">
+        <div className="absolute w-full overflow-x-auto scrollbar scrollbar-thumb-night scrollbar-track-light-primary scrollbar-w-[10px] scrollbar-h-2  pt-5 pb-10 flex justify-between mt-10">
           {blogList.map((blog, i) => (
             <BlogCard
               data={blog}

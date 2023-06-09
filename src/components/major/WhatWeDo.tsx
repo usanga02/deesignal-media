@@ -47,16 +47,23 @@ const WhatWeDo = (props: Props) => {
             DOCUMENTARY FILMING
           </button>
 
+          {/* <ul className="flex justify-around border mt-4 md:flex-nowrap flex-wrap">
+        <button className="z-30 col-span-2 border-r-2 lg:border-r-0 my-3 lg:my-8">
+          WEDDING FILMS
+        </button>
+        <button className="z-30 col-span-3 my-3 lg:my-8">
+          LIFE EVENT STREAMING
+        </button>
+        <button className="z-30 col-span-5 my-3 lg:my-8">
+          DOCUMENTARY FILMING
+        </button> */}
+
           <hr className="col-span-6 absolute right-44 left-44 top-[100px] h-[1px] self-center lg:hidden" />
           <button className="z-30 col-span-5 my-3 lg:my-8">
-            AU<span className="text-light">DIO - VISUAL SUPPORT</span>
+            AUDIO - VISUAL SUPPORT
           </button>
         </ul>
       </div>
-      <div className="absolute hidden lg:block -top-[30px] right-[237px] w-[430px] z-20 h-[519px] border-[1px] border-[#0000004D]"></div>
-      <div className="absolute hidden lg:block top-[30px] right-[237px] w-[430px] bg-cover bg-center bg-our-people bg-no-repeat bg-fixed z-20 h-[459px] border-[1px] border-[#0000004D]"></div>
-      <div className="absolute hidden lg:block -z-10 -top-24 right-44 w-[560px] h-[650px] lg:h-[530px] border-[1px] border-[#0000004D] bg-light"></div>
-      <div className="absolute hidden lg:block z-10 -top-[95px] border-0 right-[177px] w-[558px] h-[528px] bg-light"></div>
     </div>
   );
 };

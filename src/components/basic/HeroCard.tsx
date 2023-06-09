@@ -7,7 +7,7 @@ type Props = {};
 const HeroCard = (props: Props) => {
   const navigate = useNavigate();
   return (
-    <div className="md:h-56 w-[330px] sm:w-[370px] md:w-[500px] font-lexend border-light-primary border-2 border-opacity-50">
+    <div className=" w-[330px] sm:w-[370px] md:w-[500px] font-lexend border-light-primary border-2 border-opacity-50">
       <div className="h-3/5 md:h-3/4 p-4 xl:p-10">
         <div className="h-1/3 text-[10px] md:text-base text-light-primary">
           Our bragging rights
