@@ -23,7 +23,7 @@ const Home = (props: Props) => {
         <Navbar />
         <Hero />
       </div>
-      <div>
+      <div className="bg-light">
         <SocialsNavbar />
         <WhatWeDo />
         <OurWorks />

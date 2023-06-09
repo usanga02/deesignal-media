@@ -10,9 +10,7 @@ const SingleBlog = () => {
   const { blog } = useAuth() || {};
   const params = useParams();
   const navigate = useNavigate();
-  const imgUrl: RegExpMatchArray = blog?.imgUrl?.match(
-    /\/d\/([^/]+)\//
-  ) as RegExpMatchArray;
+  const imgUrl: RegExpMatchArray = blog?.imgUrl?.match(/\/d\/([^/]+)\//)!;
   const img = `https://drive.google.com/uc?export=view&id=${imgUrl[1]}`;
   console.log(params.blogname);
   return (
