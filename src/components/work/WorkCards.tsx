@@ -1,26 +1,31 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router";
+import useAuth from "../../hooks/useAuth";
 
 type Props = {
   data: any;
   extraClass?: string;
 };
 const WorkCards = ({ data, extraClass }: Props) => {
+  const { setWork } = useAuth() || {};
   const navigate = useNavigate();
   const location = useLocation().pathname;
-  const img = `https://drive.google.com/uc?export=view&id=${
-    data.imgUrl.match(/\/d\/([^/]+)\//)[1]
-  }`;
+  // const img = `https://drive.google.com/uc?export=view&id=${
+  //   data.imgUrl.match(/\/d\/([^/]+)\//)[1]
+  // }`;
   const classes = `md:max-w-[350px] bg-transparent w-full ${extraClass}`;
   return (
     <div className={classes}>
       <div
-        onClick={() => navigate(`${location}/details`)}
+        onClick={() => {
+          setWork(data);
+          navigate(`${location}/details`);
+        }}
         className=" cursor-pointer"
       >
         <div className="h-[400px]">
           <img
-            src={img}
+            src={data?.imgUrl?.asset?.url}
             width={350}
             alt="drive image"
             className="h-[475px] object-cover object-center"

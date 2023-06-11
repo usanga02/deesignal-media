@@ -6,11 +6,26 @@ import WorkInfo from "../components/work/WorkInfo";
 import WorkGallery from "../components/work/WorkGallery";
 import Capture from "../components/work/Capture";
 import Footer from "../components/major/Footer";
+import useAuth from "../hooks/useAuth";
 
 type Props = {};
 
 const WorkDetails = (props: Props) => {
+  const { work } = useAuth() || {};
   const navigate = useNavigate();
+  const {
+    title,
+    imgUrl: {
+      asset: { url },
+    },
+    gallery,
+    category,
+    whatwedid,
+    whatweused,
+    outcome,
+    note,
+    videoUrl,
+  } = work!;
 
   return (
     <m.section
@@ -22,15 +37,25 @@ const WorkDetails = (props: Props) => {
     >
       <div>
         <NavbarDark />
-        <WorkDetailsHeader />
+        <WorkDetailsHeader
+          videoUrl={videoUrl}
+          title={title}
+          imgUrl={url}
+          gallery={gallery}
+        />
       </div>
 
       <div className="-mt-36">
-        <WorkInfo />
+        <WorkInfo
+          whatwedid={whatwedid}
+          whatweused={whatweused}
+          outcome={outcome}
+          note={note}
+        />
       </div>
 
       <div className="px-16 mt-10">
-        <WorkGallery />
+        <WorkGallery gallery={gallery} />
 
         <div className="mt-10 flex justify-center">
           <a

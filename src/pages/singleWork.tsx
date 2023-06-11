@@ -8,6 +8,7 @@ import { Pagination } from "flowbite-react";
 import { motion as m } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { AppService } from "../services/app.service";
+import { client } from "../services/client";
 
 const wedding_photos = [
   {
@@ -65,20 +66,45 @@ const SingleWork = () => {
       return "";
     }
   };
+  console.log(getCategory());
 
   useEffect(() => {
-    const getAllBlogs = async () => {
-      const response = await appService.getWorks(getCategory());
+    client
+      .fetch(
+        `*[_type == "work"] {
+      title,
+      category,
+      videoUrl,
+      note,
+      whatwedid,
+      whatweused,
+      outcome,
+      gallery,
+      publishedAt,
+      imgUrl {
+        asset -> {
+          _id,
+          url
+        },
+        alt,
+      },
+    } | order(publishedAt desc)`
+      )
+      .then((data) => setWorks(data))
+      .catch(console.error);
+    // const getAllWorks = async () => {
+    //   const response = await appService.getWorks(getCategory());
 
-      if (response.status === 0) {
-        console.log(response, "error message");
-      } else {
-        setWorks(response);
-      }
-    };
+    //   if (response.status === 0) {
+    //     console.log(response, "error message");
+    //   } else {
+    //     setWorks(response);
+    //   }
+    // };
 
-    getAllBlogs();
+    // getAllWorks();
   }, []);
+  console.log(works);
 
   function paginate() {
     setCurrentPage(2);

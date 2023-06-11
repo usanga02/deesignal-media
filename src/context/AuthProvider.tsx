@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { IBlog, BlogContextType } from "../@types/blog";
+import { IBlog, BlogContextType, IWork } from "../@types/blog";
 
 const AuthContext = createContext<BlogContextType | null>(null);
 
@@ -9,9 +9,12 @@ interface Props {
 
 export const AuthProvider: React.FC<Props> = ({ children }) => {
   const [blog, setBlog] = useState<IBlog | null>(null);
+  const [work, setWork] = useState<IWork | null>(null);
   return (
     <AuthContext.Provider
       value={{
+        work,
+        setWork,
         blog,
         setBlog,
       }}

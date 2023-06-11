@@ -5,6 +5,7 @@ import BlogCard from "../components/basic/BlogCard";
 import { Pagination, Spinner } from "flowbite-react";
 import { motion as m } from "framer-motion";
 import { AppService } from "../services/app.service";
+import { client } from "../services/client";
 
 const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,20 +21,37 @@ const Blog = () => {
   }
 
   useEffect(() => {
-    const getAllBlogs = async () => {
-      const response = await appService.getBlogs();
+    client
+      .fetch(
+        `*[_type == "blog"] {
+      title,
+      subtitle,
+      body,
+      publishedAt,
+      imgUrl {
+        asset -> {
+          _id,
+          url
+        },
+        alt,
+      },
+    } | order(publishedAt desc)`
+      )
+      .then((data) => setBlogList(data))
+      .catch(console.error);
+    // const getAllBlogs = async () => {
+    //   const response = await appService.getBlogs();
 
-      if (response.status === 0) {
-        console.log(response, "error message");
-      } else {
-        console.log(response)
-        setBlogList(response);
-      }
-    };
-
-    getAllBlogs();
+    //   if (response.status === 0) {
+    //     console.log(response, "error message");
+    //   } else {
+    //     console.log(response)
+    //     setBlogList(response);
+    //   }
+    // };
+    // getAllBlogs();
   }, []);
-
+  console.log(blogList);
   return (
     <m.section
       initial={{ y: "20%" }}
@@ -54,15 +72,21 @@ const Blog = () => {
 
       <section className="lg:px-16 px-5 mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-20 gap-y-10 justify-items-center">
-          {blogList && blogList.map((blog, i) => (
-            <>
-              {isOdd(i) ? (
-                <BlogCard extraClass="mt-10" key={i} data={blog} page="blog" />
-              ) : (
-                <BlogCard data={blog} key={i} page="blog" />
-              )}
-            </>
-          ))}
+          {blogList &&
+            blogList.map((blog, i) => (
+              <>
+                {isOdd(i) ? (
+                  <BlogCard
+                    extraClass="mt-10"
+                    key={i}
+                    data={blog}
+                    page="blog"
+                  />
+                ) : (
+                  <BlogCard data={blog} key={i} page="blog" />
+                )}
+              </>
+            ))}
         </div>
       </section>
 

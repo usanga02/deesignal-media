@@ -1,8 +1,13 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  note?: string;
+  whatwedid?: string;
+  whatweused?: string;
+  outcome?: string;
+};
 
-const WorkInfo = (props: Props) => {
+const WorkInfo = ({ note, whatwedid, whatweused, outcome }: Props) => {
   return (
     <div className="bg-[#16213A] p-16 text-white">
       <div className="flex justify-between">
@@ -15,25 +20,22 @@ const WorkInfo = (props: Props) => {
           <div className="border h-[200px] border-gray-600 w-[1px]"></div>
         </div>
 
-        <div className="xl:w-3/12 w-4/12">
-          <h1 className="text-lg">COUPLES NOTE.</h1>
-
-          <p className="mb-2 text-sm text-gray-300 mt-4">
-            Lorem ipsum dolor sit amet, consectetuer Pipiscing elenean mmodo
-            ligulaet olor. Aenean massAenean massa. rem ipsum dolor
-            sIsectetiodipiscing elit.iian modoamet, consectetiodipiscing
-            elit.AenodoLorem ipsum dolor sit amet, consectetuer adipiscineneanii
-            mmodo ligulaet olor. Aenean massa.
-          </p>
-
-          <p className="text-sm text-gray-300">
-            Lorem ipsum dolor sit amet, consectetuer Pipiscing elenean mmodo
-            ligulaet olor. Aenean massAenean massa. rem ipsum dolor
-            sIsectetiodipiscing elit.iian modoamet, consectetiodipiscing
-            elit.AenodoLorem ipsum dolor sit amet, consectetuer adipiscineneanii
-            mmodo ligulaet olor. Aenean massa.
-          </p>
-        </div>
+        {note ? (
+          <div className="xl:w-3/12 w-4/12">
+            <h1 className="text-lg">COUPLES NOTE.</h1>
+            <p className="mb-2 text-sm text-gray-300 mt-4">{note}</p>
+            {/* {note} */}
+          </div>
+        ) : (
+          <div className="xl:w-3/12 w-4/12">
+            <h1 className="text-lg">WHAT WE DID.</h1>
+            <p className="mb-2 text-sm text-gray-300 mt-4">{whatwedid}</p>
+            <h1 className="text-lg">WHAT WE USED.</h1>
+            <p className="mb-2 text-sm text-gray-300 mt-4">{whatweused}</p>
+            <h1 className="text-lg">OUTCOME.</h1>
+            <p className="mb-2 text-sm text-gray-300 mt-4">{outcome}</p>
+          </div>
+        )}
       </div>
     </div>
   );

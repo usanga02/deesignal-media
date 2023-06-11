@@ -1,11 +1,62 @@
 import React from "react";
 import { TbArrowBackUp } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
+import YouTube from "react-youtube";
 
-type Props = {};
+type Props = {
+  title: string;
+  imgUrl: string;
+  gallery: string[];
+  videoUrl?: string;
+};
 
-const WorkDetailsHeader = (props: Props) => {
+const WorkDetailsHeader = ({ title, imgUrl, gallery, videoUrl }: Props) => {
   const navigate = useNavigate();
+
+  function getYoutubeVideoId(url: string): string | null {
+    // Regular expression to match YouTube video URL patterns
+    const youtubeRegex =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([\w-]{11})$/;
+
+    // Extract video ID from the URL
+    const match = url.match(youtubeRegex);
+    if (match && match[1]) {
+      return match[1]; // Return the extracted video ID
+    }
+
+    return null; // Return null if no video ID is found
+  }
+
+  const options = {
+    width: "560",
+    height: "315",
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
+  let img2Url: string | null = "";
+  let videoId: string | null = "";
+  const driveRegex =
+    /^(https?:\/\/)?(www\.)?drive\.google\.com\/file\/d\/[a-zA-Z0-9_-]+\/?/i;
+
+  if (videoUrl) {
+    if (videoUrl.match(driveRegex)) {
+      img2Url = `https://drive.google.com/uc?export=view&id=${
+        videoUrl.match(/\/d\/([^/]+)\//)![1]
+      }`;
+    } else {
+      videoId = getYoutubeVideoId(videoUrl);
+    }
+  } else {
+    img2Url = `https://drive.google.com/uc?export=view&id=${
+      gallery[2].match(/\/d\/([^/]+)\//)![1]
+    }`;
+  }
+
+  const img1Url = `https://drive.google.com/uc?export=view&id=${
+    gallery[1].match(/\/d\/([^/]+)\//)![1]
+  }`;
 
   return (
     <div className="px-16 mt-10">
@@ -19,30 +70,34 @@ const WorkDetailsHeader = (props: Props) => {
 
       <div>
         <h1 className="font-druk-wide leading-relaxed text-4xl w-[600px] mt-8 mb-5">
-          IFEOLUWA & ADEBISI FEB 15th 2023
+          {title}
         </h1>
 
         <div className="flex justify-between gap-5 mt-14 items-center">
           <img
-            src={require("../../assets/img/wedding/wedding1.png")}
-            className="object-cover"
+            src={imgUrl}
+            className="object-cover object-center h-[650px]"
+            width={450}
             alt=""
           />
 
           <img
-            src={require("../../assets/img/wedding/wedding2.png")}
-            className="object-cover"
+            src={img1Url}
+            className="object-cover h-[500px]"
             width={320}
             alt=""
           />
 
           <div className="-mt-[400px]">
-            <img
-              src={require("../../assets/img/wedding/wedding3.png")}
-              width={450}
-              className="object-cover"
-              alt=""
-            />
+            {videoUrl ? (
+              videoUrl.match(driveRegex) ? (
+                <video src={img2Url} width={550} typeof="video/moc" controls />
+              ) : (
+                <YouTube videoId={videoId as string} opts={options} />
+              )
+            ) : (
+              <img src={img2Url} width={450} className="object-cover" alt="" />
+            )}
           </div>
         </div>
       </div>

@@ -8,11 +8,12 @@ import { IBlog } from "../@types/blog";
 
 const SingleBlog = () => {
   const { blog } = useAuth() || {};
-  const params = useParams();
+  // const params = useParams();
   const navigate = useNavigate();
-  const imgUrl: RegExpMatchArray = blog?.imgUrl?.match(/\/d\/([^/]+)\//)!;
-  const img = `https://drive.google.com/uc?export=view&id=${imgUrl[1]}`;
-  console.log(params.blogname);
+  // const imgUrl: RegExpMatchArray = blog?.imgUrl?.match(/\/d\/([^/]+)\//)!;
+  // const img = `https://drive.google.com/uc?export=view&id=${imgUrl[1]}`;
+  // console.log(blog?.imgUrl?.asset?.url);
+  // console.log(params.blogname);
   return (
     <m.section
       initial={{ y: "20%" }}
@@ -25,14 +26,18 @@ const SingleBlog = () => {
 
       <section className="px-32 mt-20">
         <div className="justify-center flex">
-          <img src={img} className="w-full h-[600px] object-cover" alt="" />
+          <img
+            src={blog?.imgUrl?.asset?.url}
+            className="w-full h-[600px] object-cover"
+            alt=""
+          />
         </div>
 
         <section className="justify-center flex">
           <div className="content w-full">
             <h6 className="font-[500] text-xl my-5">{blog?.title}</h6>
             <h6 className="font-[400] text-[14px]">
-              {blog?.createdAt?.split("T")[0]} - PRESS
+              {blog?.publishedAt?.split("T")[0]} - PRESS
             </h6>
 
             <p className="font-[500] text-lg mt-3">{blog?.subtitle}</p>

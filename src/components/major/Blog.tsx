@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BlogCard from "../basic/BlogCard";
 import { AppService } from "../../services/app.service";
+import { client } from "../../services/client";
 
 type Props = {};
 
@@ -9,17 +10,36 @@ const Blog = (props: Props) => {
   const [blogList, setBlogList] = useState([]);
 
   useEffect(() => {
-    const getAllBlogs = async () => {
-      const response = await appService.getBlogs();
+    client
+      .fetch(
+        `*[_type == "blog"] {
+    title,
+    subtitle,
+    body,
+    publishedAt,
+    imgUrl {
+      asset -> {
+        _id,
+        url
+      },
+      alt,
+    },
+  } | order(publishedAt desc)`
+      )
+      .then((data) => setBlogList(data))
+      .catch(console.error);
 
-      if (response.status === 0) {
-        console.log(response, "error message");
-      } else {
-        setBlogList(response);
-      }
-    };
+    // const getAllBlogs = async () => {
+    //   const response = await appService.getBlogs();
 
-    getAllBlogs();
+    //   if (response.status === 0) {
+    //     console.log(response, "error message");
+    //   } else {
+    //     setBlogList(response);
+    //   }
+    // };
+
+    // getAllBlogs();
   }, []);
 
   return (
