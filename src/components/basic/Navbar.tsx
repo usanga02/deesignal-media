@@ -1,31 +1,36 @@
-import React from "react";
 import { ReactComponent as MenuIcon } from "../../assets/svg/menu-item.svg";
 import Button from "../variants/Button";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   return (
-    <div className=" bg-transparent h-40 font-lexend font-[400] flex justify-between items-center px-32 text-light-primary">
+    <div className=" bg-transparent h-32 md:h-40 font-lexend font-[400] flex justify-between items-center px-5 md:px-16 text-light-primary">
       <img
+        className="cursor-pointer md:h-12 h-8"
+        alt="deesignal-logo"
         onClick={() => navigate("/")}
-        className="cursor-pointer"
-        src="/Deesignal-logo.png"
-        width={300}
-        height={300}
+        src={
+          location.pathname !== "/"
+            ? "/Deesignal-logo.png"
+            : "/Deesignal-logo-colored.png"
+        }
       />
       <div className="flex items-center">
-        <Button extraClass="px-10" label="BOOK US" />
+        {location.pathname !== "/book_us" && (
+          <Button
+            extraClass="md:px-10 px-6 sm:block hidden"
+            label="BOOK US"
+            onClick={() => navigate("/book_us")}
+          />
+        )}
         <MenuIcon
-          style={{
-            fill: "white",
-            height: 70,
-            width: 40,
-            marginLeft: 32,
-            cursor: "pointer",
-          }}
+          onClick={() => navigate("/menu")}
+          className="cursor-pointer fill-light ml-5 h-8 md:h-10 w-8 md:w-10"
         />
       </div>
     </div>
