@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/basic/Navbar";
 import Footer from "../components/major/Footer";
 import BlogCard from "../components/basic/BlogCard";
-import { Pagination, Spinner } from "flowbite-react";
+// import { Pagination } from "flowbite-react";
 import { motion as m } from "framer-motion";
 import { AppService } from "../services/app.service";
 import { client } from "../services/client";
+import Pagination from "../components/basic/Pagination";
 
 const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,7 +14,7 @@ const Blog = () => {
   const appService = new AppService();
 
   function paginate() {
-    setCurrentPage(2);
+    setCurrentPage(currentPage + 1);
   }
 
   function isOdd(number: any) {
@@ -51,7 +52,6 @@ const Blog = () => {
     // };
     // getAllBlogs();
   }, []);
-  console.log(blogList);
   return (
     <m.section
       initial={{ y: "20%" }}
@@ -60,11 +60,11 @@ const Blog = () => {
       transition={{ duration: 1 }}
       className="absolute w-full bg-light top-0 right-0"
     >
-      <div className="h-[90vh] bg-night">
+      <div className="h-screen bg-night">
         <Navbar />
 
         <div className="h-full w-full flex justify-center">
-          <h2 className="text-light font-druk-wide mt-44 font-[700] leading-relaxed text-5xl text-center">
+          <h2 className="text-light font-druk-wide mt-44 font-[700] leading-relaxed text-xl md:text-5xl text-center">
             Blog
           </h2>
         </div>
@@ -94,7 +94,6 @@ const Blog = () => {
         <Pagination
           currentPage={currentPage}
           onPageChange={paginate}
-          showIcons
           totalPages={100}
         />
       </div>
