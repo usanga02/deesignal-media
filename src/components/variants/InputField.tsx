@@ -15,7 +15,7 @@ const InputField = ({
   extraClass,
   value,
 }: Props) => {
-  const classes = `border-[1px] border-light-primary py-6 px-8 text-md font-lexend placeholder-light-primary outline-none text-light-primary h-12 bg-transparent ${extraClass}`;
+  const classes = `border-[1px] border-light-primary lg:py-6 lg:px-8 text-md font-lexend placeholder-light-primary outline-none text-sm lg:text-base text-light-primary md:h-12 bg-transparent ${extraClass}`;
   return (
     <input
       value={value}

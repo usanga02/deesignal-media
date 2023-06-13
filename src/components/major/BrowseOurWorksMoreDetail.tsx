@@ -28,14 +28,14 @@ const BrowseOurWorksMoreDetail = (props: Props) => {
       </div>
       <hr className="text-light-primary border-[1px] text-opacity-50 mt-5" />
       <hr className="text-light-primary border-[1px] text-opacity-50 mt-0.5 mb-12" />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center px-4">
         <h5 className="mb-4 font-[500]">
           VIEW MORE OF OUR WORKS ON OUR INSTAGRAM PAGE
         </h5>
         <p className="text-primary font-[500] md:w-1/2 mb-9 md:mx-0 mx-5">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean mmodo
-          ligulaet olor. Aenean massa. Cum Aenean massa. Lorem ipsum dolor sit
-          amet, consectetiodipiscing elit. Aenean mmodo
+          At DEESIGNAL Media we offer services From birthdays, bridal showers,
+          baby showers, to every gathering in between, we would love to be a
+          part of those joyous moments.
         </p>
         <img
           className="mb-9"
@@ -45,14 +45,15 @@ const BrowseOurWorksMoreDetail = (props: Props) => {
           height={300}
         />
         <a
-          className="hover:underline mb-16 font-[500] underline-offset-2"
-          href="https://www.partyoverhererentalstx.com/gallery.php"
+          className="hover:underline mb-16 font-[500] underline underline-offset-2"
+          target="_blank"
+          href="https://instagram.com/deesignalmedia?igshid=NTc4MTIwNjQ2YQ=="
         >
-          https://www.partyoverhererentalstx.com/gallery.php
+          Deesignal Instagram Page
         </a>
       </div>
-      <div className="flex flex-col items-center p-20 bg-moon-light">
-        <h5 className="text-night text-xl w-[410px] mb-10 font-druk-wide font-[700]">
+      <div className="flex flex-col items-center px-5 py-20 lg:p-20 bg-moon-light">
+        <h5 className="text-night text-xl w-full lg:w-[410px] mb-10 font-druk-wide font-[700]">
           Want to capture the action? Lets Shoot.
         </h5>
         <Button

@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 const Capture = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-moon-light p-16 text-[#fff]">
-      <p className="text-center font-druk-wide font-[700] leading-relaxed text-night text-xl">
+    <div className="bg-moon-light  px-5 py-20 lg:p-16 text-[#fff]">
+      <p className="text-center font-druk-wide font-[700] leading-relaxed text-night md:text-xl">
         Want to capture the action? <br />
         Lets Shoot.
       </p>

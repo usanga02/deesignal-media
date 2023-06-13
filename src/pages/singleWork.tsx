@@ -4,55 +4,14 @@ import MiddleNav from "../components/work/MiddleNav";
 import WorkCards from "../components/work/WorkCards";
 import Footer from "../components/major/Footer";
 import Capture from "../components/work/Capture";
-import { Pagination } from "flowbite-react";
 import { motion as m } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import { AppService } from "../services/app.service";
 import { client } from "../services/client";
-
-const wedding_photos = [
-  {
-    name: "IFE & BISI",
-    image: "wedding_1.png",
-  },
-  {
-    name: "TOSIN & DAMI",
-    image: "wedding_2.png",
-  },
-  {
-    name: "NGOZI & HENRY",
-    image: "wedding_3.png",
-  },
-  {
-    name: "BLESSING & FUMBI",
-    image: "wedding_4.png",
-  },
-  {
-    name: "BIMPE & TOSIN",
-    image: "wedding_5.png",
-  },
-  {
-    name: "RUKEY & FELIX",
-    image: "wedding_6.png",
-  },
-  {
-    name: "VIVIAN & TOBI",
-    image: "wedding_7.png",
-  },
-  {
-    name: "TEMI & SAM",
-    image: "wedding_8.png",
-  },
-  {
-    name: "GIFT & NELSON",
-    image: "wedding_9.png",
-  },
-];
+import Pagination from "../components/basic/Pagination";
 
 const SingleWork = () => {
   const location = useLocation().pathname;
   const [currentPage, setCurrentPage] = useState(1);
-  const appService = new AppService();
   const [works, setWorks] = useState([]);
 
   const getCategory = () => {
@@ -66,12 +25,11 @@ const SingleWork = () => {
       return "";
     }
   };
-  console.log(getCategory());
 
   useEffect(() => {
     client
       .fetch(
-        `*[_type == "work"] {
+        `*[_type == "work" && category == "${getCategory()}"] {
       title,
       category,
       videoUrl,
@@ -104,10 +62,9 @@ const SingleWork = () => {
 
     // getAllWorks();
   }, []);
-  console.log(works);
 
   function paginate() {
-    setCurrentPage(2);
+    setCurrentPage(currentPage + 1);
   }
 
   return (
@@ -122,13 +79,13 @@ const SingleWork = () => {
         <Navbar />
 
         <div className="h-full w-full flex justify-center">
-          <h2 className="text-light font-druk-wide mt-44 font-[700] leading-relaxed text-5xl text-center">
+          <h2 className="text-light font-druk-wide mt-44 font-[700] leading-relaxed text-xl md:text-5xl text-center">
             {location === "/our_works/live_event_streaming"
               ? "Live Event Streaming"
               : location === "/our_works/wedding_films"
               ? "Wedding Films"
-              : location === "/our_works/documentary_filming"
-              ? "Documentary Filming"
+              : location === "/our_works/documentary_films"
+              ? "Documentary Films"
               : "Audio - Visual Support"}
           </h2>
         </div>
@@ -151,7 +108,6 @@ const SingleWork = () => {
           <Pagination
             currentPage={currentPage}
             onPageChange={paginate}
-            showIcons
             totalPages={100}
           />
         </div>

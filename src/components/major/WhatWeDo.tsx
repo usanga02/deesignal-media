@@ -11,14 +11,14 @@ const WhatWeDo = (props: Props) => {
         <h2 className=" font-druk-wide text-night text-center lg:text-left text-lg w-60 lg:text-3xl mt-14 lg:mt-0 mb-8 lg:w-96">
           What we do at Deesignal Media
         </h2>
-        <h5 className="lg:w-1/2 text-justify text-sm lg:text-xl text-primary">
-          Deesignal Media is a leading media company specializing in video
-          coverage, live streaming, and documentary creation. With a strong
-          focus on capturing and conveying powerful stories through visual
-          mediums, Deesignal Media has established itself as a trusted name in
-          the media industry. The company's commitment to excellence,
-          innovation, and professionalism sets it apart and ensures that clients
-          receive exceptional services tailored to their unique needs.
+        <h5 className="lg:w-1/2 text-justify text-sm lg:text-lg text-primary">
+          At Deesignal Media, we believe that every moment in life deserves to
+          be captured, cherished, and shared. As an audio-visual production
+          company, we specialise in transforming ordinary events into
+          extraordinary memories. From enchanting wedding films to captivating
+          live event streaming and thought-provoking documentary filmmaking, we
+          bring stories to life through the power of visuals and sound. Welcome
+          to Deesignal Media, where moments become masterpieces.
         </h5>
       </div>
       <div className="w-full flex justify-center lg:justify-start">
@@ -37,19 +37,31 @@ const WhatWeDo = (props: Props) => {
         </div>
 
         <ul className="lg:flex relative grid text-center grid-cols-5 w-full font-lexend justify-between lg:mt-4 lg:px-12 border-t-0 lg:border-t-[1px] border-[1px] font-[700] text-xs sm:text-sm md:text-lg bg-light border-light-primary lg:w-5/6">
-          <button className="z-30 col-span-2 border-r-2 lg:border-r-0 my-3 lg:my-8">
+          <button
+            onClick={() => navigate("/our_works/wedding_films")}
+            className="z-30 col-span-2 border-r-2 lg:border-r-0 my-3 lg:my-8"
+          >
             WEDDING FILMS
           </button>
-          <button className="z-30 col-span-3 my-3 lg:my-8">
-            LIFE EVENT STREAMING
+          <button
+            onClick={() => navigate("/our_works/live_event_streaming")}
+            className="z-30 col-span-3 my-3 lg:my-8"
+          >
+            LIVE EVENT STREAMING
           </button>
-          <button className="z-30 col-span-5 my-3 lg:my-8">
-            DOCUMENTARY FILMING
+          <button
+            onClick={() => navigate("/our_works/documentary_films")}
+            className="z-30 col-span-5 my-3 lg:my-8"
+          >
+            DOCUMENTARY FILMS
           </button>
 
-          <hr className="col-span-6 absolute right-44 left-44 top-[100px] h-[1px] self-center lg:hidden" />
-          <button className="z-30 col-span-5 my-3 lg:my-8">
-            AU<span className="text-light">DIO - VISUAL SUPPORT</span>
+          <hr className="col-span-5 absolute right-44 left-44 top-[100px] h-[1px] self-center lg:hidden" />
+          <button
+            onClick={() => navigate("/our_works/audio_-_visual_support")}
+            className="z-30 col-span-5 my-3 lg:my-8"
+          >
+            AU <span className="lg:text-light -ml-1">DIO - VISUAL SUPPORT</span>
           </button>
         </ul>
       </div>

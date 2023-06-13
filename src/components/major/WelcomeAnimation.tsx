@@ -32,7 +32,7 @@ const WelcomeAnimation = () => {
       transition={{ duration: 1 }}
       animate={animationComplete ? "exit" : "animate"}
       exit="exit"
-      className="fixed flex-col top-0 z-50 left-0 w-full font-bold font-druk-wide h-full text-2xl gap-4 flex justify-center items-center bg-gray-900 text-white"
+      className="fixed flex-col top-0 z-50 left-0 w-full font-bold font-druk-wide h-full text-[10px] md:text-2xl gap-4 flex justify-center items-center bg-gray-900 text-white"
     >
       <motion.h1
         // variants={animationVariants}
@@ -45,7 +45,6 @@ const WelcomeAnimation = () => {
         "Our aim is to create beautiful memories of
       </motion.h1>
       <motion.h1
-        // variants={animationVariants}
         initial={{ x: "-200%" }}
         transition={{ duration: 2 }}
         animate={textAnimationComplete ? "exit" : { x: "0%" }}
@@ -55,7 +54,6 @@ const WelcomeAnimation = () => {
         moments that you can access whenever & will
       </motion.h1>
       <motion.h1
-        // variants={animationVariants}
         initial={{ x: "400%" }}
         transition={{ duration: 2 }}
         animate={textAnimationComplete ? "exit" : { x: "0%" }}
@@ -80,52 +78,3 @@ const WelcomeAnimation = () => {
 };
 
 export default WelcomeAnimation;
-
-// import React from "react";
-// import { motion } from "framer-motion";
-
-// const WelcomeAnimation = () => {
-//   const animationVariants = {
-//     initial: { opacity: 0 },
-//     animate: { opacity: 1 },
-//     exit: { opacity: 0 },
-//   };
-
-//   const headerVariants = {
-//     initial: (index: any) => ({
-//       opacity: 0,
-//       x: index % 2 === 0 ? -100 : 100,
-//     }),
-//     animate: {
-//       opacity: 1,
-//       x: 0,
-//       transition: {
-//         delay: 0.2, // Adjust the delay for each header element
-//       },
-//     },
-//     exit: (index: any) => ({
-//       opacity: 0,
-//       x: index % 2 === 0 ? -100 : 100,
-//     }),
-//   };
-
-//   return (
-//     <div className="flex flex-col items-center">
-//       {[1, 2, 3, 4].map((index) => (
-//         <motion.h1
-//           key={index}
-//           variants={headerVariants}
-//           initial="initial"
-//           animate="animate"
-//           exit="exit"
-//           custom={index}
-//           className="text-4xl font-bold my-4"
-//         >
-//           Header {index}
-//         </motion.h1>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default WelcomeAnimation;

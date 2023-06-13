@@ -17,8 +17,8 @@ export default defineType({
       options: {
         list: [
           'Wedding Films',
-          'Documentary Filming',
-          'Live Events Streaming',
+          'Documentary Films',
+          'Live Event Streaming',
           'Audio - Visual Support',
         ],
       },

@@ -14,7 +14,7 @@ const Hero = (props: Props) => {
     "Let's Shoot",
   ];
   return (
-    <div>
+    <div className="pt-32 lg:pt-0">
       <AutoSlideTextCarousel texts={texts} interval={2000} />
       <div className="lg:p-32 gap-5 pb-0 md:pb-0 flex flex-col lg:flex-row items-center justify-between">
         <HeroCard />

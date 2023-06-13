@@ -8,12 +8,12 @@ const MenuNavbar = (props: Props) => {
   return (
     <div className="flex h-40 justify-between items-center">
       <img
-        className="cursor-pointer md:w-[300px] w-[150px]"
+        className="cursor-pointer md:w-[300px] w-[200px]"
         src="/Deesignal-logo.png"
         onClick={() => navigate("/")}
         alt="deesignal logo"
       />
-      <ul className="md:flex hidden justify-between w-1/3 h-10 items-center text-light-primary font-[500] font-lexend">
+      <ul className="lg:flex hidden justify-between w-1/3 h-10 items-center text-light-primary font-[500] font-lexend">
         <li className="cursor-pointer p-4">
           <a
             href="https://instagram.com/deesignalmedia?igshid=NTc4MTIwNjQ2YQ=="
@@ -50,9 +50,9 @@ const MenuNavbar = (props: Props) => {
       <div className="w-1/6 flex justify-end">
         <button
           onClick={() => navigate(-1)}
-          className="p-8 hover:bg-light-primary hover:bg-opacity-10 rounded-full"
+          className="p-4 md:p-8 hover:bg-light-primary hover:bg-opacity-10 rounded-full"
         >
-          <TfiClose className="text-light-primary text-4xl" />
+          <TfiClose className="text-light-primary text-xl md:text-4xl" />
         </button>
       </div>
     </div>

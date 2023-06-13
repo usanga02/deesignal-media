@@ -3,33 +3,27 @@ import React from "react";
 const Support = () => {
   return (
     <>
-      <h1 className="font-druk-wide text-[#00000099] text-2xl text-center mb-20">
-        Support
-      </h1>
-
-      <div className="flex md:flex-row flex-col gap-10">
-        <div>
+      <div className="flex md:flex-row flex-col xl:mb-[75px] gap-20">
+        <div className="md:mt-40">
           <div>
             <h1 className="font-druk-wide text-[#00000099] text-2xl">
-              Audio Support
+              Audio Visual Support
             </h1>
 
-            <p className="mt-5 text-[#000000cc]">
-              Our comprehensive Audio and Visual Support services encompass
-              state-of-the-art sound systems, crystal-clear projection, dynamic
-              lighting, and cutting-edge visual effects. We meticulously tailor
-              our solutions to match your specific needs, ensuring every word is
-              heard, every image is vivid, and every moment is amplified. With
-              our experienced technicians and top-of-the-line equipment, we
-              seamlessly integrate audio and visual elements to transform your
-              venue into an unforgettable space. From professional-grade sound
-              setups that deliver clear, immersive audio, to high-resolution
-              projection systems that bring your visuals to life, we take care
-              of every detail to ensure a flawless experience.
+            <p className="mt-5 text-justify text-[#000000cc]">
+              Our team of AV specialists is dedicated to delivering immersive
+              and captivating audio-visual experiences. Whether you're hosting a
+              corporate event, a live concert, or a private function, we have
+              the expertise and state-of-the-art equipment to create
+              unforgettable moments. From designing and setting up professional
+              sound systems to creating stunning visual displays with LED
+              screens, we ensure that your event's audio and visual components
+              are seamlessly integrated, elevating the overall experience for
+              your audience
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <h1 className="font-druk-wide text-[#00000099] text-2xl mt-10">
               Visual Support
             </h1>
@@ -44,7 +38,7 @@ const Support = () => {
               clients receive exceptional services tailored to their unique
               needs.
             </p>
-          </div>
+          </div> */}
         </div>
 
         <img

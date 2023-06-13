@@ -6,19 +6,20 @@ type Props = {
   comment: string;
   name: string;
   image?: string;
+  extraClass?: string;
 };
 
-const ClientComment = ({ title, comment, name, image }: Props) => {
+const ClientComment = ({ title, comment, name, image, extraClass }: Props) => {
   return (
-    <div>
-      <Quotes className="mt-[43px]" />
-      <h4 className="text-light-primary font-[500] text-2xl w-[412px] mt-8">
+    <div className={extraClass}>
+      <Quotes className="mx-auto lg:mx-0 lg:mt-[43px] mt-3" />
+      <h4 className="text-light-primary font-[700] text-lg lg:w-[412px] mt-3 lg:mt-8">
         {title}
       </h4>
-      <h6 className="text-light-primary w-[460px] text-justify mt-4">
+      <h6 className="text-light-primary lg:w-[460px] text-sm lg:text-base text-justify mt-4">
         {comment}
       </h6>
-      <div className="flex items-center  mt-6">
+      <div className="flex items-center mb-3 lg:mb-0 mt-6">
         <img
           src={image}
           alt="client"

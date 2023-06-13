@@ -54,7 +54,7 @@ const WorkDetails = (props: Props) => {
         />
       </div>
 
-      <div className="px-16 mt-10">
+      <div className="px-8 md:px-16 mt-10 md:mt-14">
         <WorkGallery gallery={gallery} />
 
         <div className="mt-10 flex justify-center">

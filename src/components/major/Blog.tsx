@@ -43,7 +43,7 @@ const Blog = (props: Props) => {
   }, []);
 
   return (
-    <div className="overflow-hidden h-screen pr-0 p-32 pt-24">
+    <div className="overflow-hidden h-screen pr-0 p-5 md:p-32 md:pt-24">
       <h3 className="font-druk-wide text-3xl">Blog</h3>
       <div className="relative w-full">
         <div className="absolute w-full overflow-x-auto scrollbar scrollbar-thumb-night scrollbar-track-light-primary scrollbar-w-[10px] scrollbar-h-2  pt-5 pb-10 flex justify-between mt-10">
@@ -53,7 +53,7 @@ const Blog = (props: Props) => {
               extraClass="flex flex-col min-w-[424px] mr-10"
             />
           ))}
-          {blogList.map((blog, i) => (
+          {/* {blogList.map((blog, i) => (
             <BlogCard data={blog} extraClass=" mr-10  min-w-[424px]" />
           ))}
           {blogList.map((blog, i) => (
@@ -61,7 +61,7 @@ const Blog = (props: Props) => {
           ))}
           {blogList.map((blog, i) => (
             <BlogCard data={blog} extraClass=" mr-10  min-w-[424px]" />
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
