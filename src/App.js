@@ -25,8 +25,8 @@ function App() {
         <Route path="/whatwedo" element={<WhatWeDo />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:blogname" element={<SingleBlog />} />
-        <Route path="/our_works/:workname" element={<SingleWork />} />
-        <Route path="/our_works/:workname/details" element={<WorkDetails />} />
+        <Route path="/our_works/:works" element={<SingleWork />} />
+        <Route path="/our_works/:works/:workname" element={<WorkDetails />} />
       </Routes>
     </AnimatePresence>
   );

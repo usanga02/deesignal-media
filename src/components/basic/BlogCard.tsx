@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
 
 type Props = {
   extraClass?: string;
@@ -9,7 +8,6 @@ type Props = {
 };
 
 const BlogCard = ({ extraClass, data, page }: Props) => {
-  const { setBlog } = useAuth() || {};
   const navigate = useNavigate();
   const location = useLocation().pathname;
   const height = location == "/" ? "h-[247px]" : "h-[400px]";
@@ -78,7 +76,6 @@ const BlogCard = ({ extraClass, data, page }: Props) => {
       <button
         className="mt-5 text-gray-600 w-fit underline"
         onClick={() => {
-          setBlog(data);
           navigate(`/blog/${data.title.replaceAll(" ", "-")}`);
         }}
       >

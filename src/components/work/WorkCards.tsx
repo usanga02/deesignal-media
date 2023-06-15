@@ -1,25 +1,19 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router";
-import useAuth from "../../hooks/useAuth";
 
 type Props = {
   data: any;
   extraClass?: string;
 };
 const WorkCards = ({ data, extraClass }: Props) => {
-  const { setWork } = useAuth() || {};
   const navigate = useNavigate();
   const location = useLocation().pathname;
-  // const img = `https://drive.google.com/uc?export=view&id=${
-  //   data.imgUrl.match(/\/d\/([^/]+)\//)[1]
-  // }`;
   const classes = `md:max-w-[350px] bg-transparent w-full ${extraClass}`;
   return (
     <div className={classes}>
       <div
         onClick={() => {
-          setWork(data);
-          navigate(`${location}/details`);
+          navigate(`${location}/${data?.title?.replaceAll(" ", "-")}`);
         }}
         className=" cursor-pointer"
       >

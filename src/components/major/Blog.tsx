@@ -43,10 +43,10 @@ const Blog = (props: Props) => {
   }, []);
 
   return (
-    <div className="overflow-hidden h-screen pr-0 p-5 md:p-32 md:pt-24">
+    <div className="overflow-hidden h-screen pr-0 p-10 md:p-32 md:pt-24">
       <h3 className="font-druk-wide text-3xl">Blog</h3>
       <div className="relative w-full">
-        <div className="absolute w-full overflow-x-auto scrollbar scrollbar-thumb-night scrollbar-track-light-primary scrollbar-w-[10px] scrollbar-h-2  pt-5 pb-10 flex justify-between mt-10">
+        <div className="absolute w-full overflow-x-auto scrollbar scrollbar-thumb-night scrollbar-track-light-primary scrollbar-w-[10px] scrollbar-h-2  pt-5 pb-3 md:pb-10 flex justify-between mt-10">
           {blogList.map((blog, i) => (
             <BlogCard
               data={blog}

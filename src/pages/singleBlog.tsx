@@ -5,15 +5,38 @@ import Footer from "../components/major/Footer";
 import { motion as m } from "framer-motion";
 import useAuth from "../hooks/useAuth";
 import { IBlog } from "../@types/blog";
+import { useEffect, useState } from "react";
+import { client } from "../services/client";
 
 const SingleBlog = () => {
-  const { blog } = useAuth() || {};
-  // const params = useParams();
+  const [blog, setBlog] = useState<IBlog | null>();
+  const params = useParams();
   const navigate = useNavigate();
-  // const imgUrl: RegExpMatchArray = blog?.imgUrl?.match(/\/d\/([^/]+)\//)!;
-  // const img = `https://drive.google.com/uc?export=view&id=${imgUrl[1]}`;
-  // console.log(blog?.imgUrl?.asset?.url);
-  // console.log(params.blogname);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "blog" && title == "${params?.blogname?.replaceAll(
+          "-",
+          " "
+        )}"] {
+      title,
+      subtitle,
+      body,
+      publishedAt,
+      imgUrl {
+        asset -> {
+          _id,
+          url
+        },
+        alt,
+      },
+    } | order(publishedAt desc)`
+      )
+      .then((data) => setBlog(data[0]))
+      .catch(console.error);
+  }, []);
+
   return (
     <m.section
       initial={{ y: "20%" }}

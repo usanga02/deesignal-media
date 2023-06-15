@@ -72,19 +72,19 @@ const WorkDetailsHeader = ({ title, imgUrl, gallery, videoUrl }: Props) => {
   if (videoUrl) {
     if (videoUrl.match(driveRegex)) {
       img2Url = `https://drive.google.com/uc?export=view&id=${
-        videoUrl.match(/\/d\/([^/]+)\//)![1]
+        videoUrl?.match(/\/d\/([^/]+)\//)![1]
       }`;
     } else {
       videoId = getYoutubeVideoId(videoUrl);
     }
-  } else {
+  } else if (gallery.length > 1) {
     img2Url = `https://drive.google.com/uc?export=view&id=${
-      gallery[2].match(/\/d\/([^/]+)\//)![1]
+      gallery[1]?.match(/\/d\/([^/]+)\//)![1]
     }`;
   }
 
   const img1Url = `https://drive.google.com/uc?export=view&id=${
-    gallery[1].match(/\/d\/([^/]+)\//)![1]
+    gallery[1]?.match(/\/d\/([^/]+)\//)![1]
   }`;
 
   return (

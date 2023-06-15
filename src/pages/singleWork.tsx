@@ -50,17 +50,6 @@ const SingleWork = () => {
       )
       .then((data) => setWorks(data))
       .catch(console.error);
-    // const getAllWorks = async () => {
-    //   const response = await appService.getWorks(getCategory());
-
-    //   if (response.status === 0) {
-    //     console.log(response, "error message");
-    //   } else {
-    //     setWorks(response);
-    //   }
-    // };
-
-    // getAllWorks();
   }, []);
 
   function paginate() {
@@ -98,6 +87,7 @@ const SingleWork = () => {
             {works.map((wedding, i) => (
               <WorkCards
                 data={wedding}
+                key={i}
                 extraClass={i === 1 || i === 4 || i === 7 ? "mt-20" : "mt-5"}
               />
             ))}

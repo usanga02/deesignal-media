@@ -88,7 +88,7 @@ const Footer = (props: Props) => {
           <h5 className="font-druk-wide text-light text-lg lg:text-2xl">
             Contacts
           </h5>
-          <div className="w-full md:mt-10 lg:h-32">
+          <div className="w-full md:mt-10 lg:h-16">
             <Button
               label="SEND A MAIL"
               extraClass="md:mr-3 px-3 lg:px-6 mt-3"
@@ -105,8 +105,10 @@ const Footer = (props: Props) => {
         </div>
 
         <div className="flex flex-col md:w-3/5 md:items-end md:mt-0 mt-10">
-          <h5 className="font-druk-wide text-light text-2xl">Journals</h5>
-          <div className="md:flex md:justify-end w-full lg:h-32 md:mt-10">
+          <h5 className="font-druk-wide text-light text-lg md:text-2xl">
+            Journals
+          </h5>
+          <div className="md:flex md:justify-end w-full lg:h-16 md:mt-10">
             <InputField
               placeholder="Type in your email"
               name="subscribe"
@@ -118,7 +120,7 @@ const Footer = (props: Props) => {
         </div>
       </div>
 
-      <div className="flex lg:flex-row flex-col items-center h-32 w-full mt-10 justify-between font-lexend text-light">
+      <div className="flex lg:flex-row flex-col items-center h-32 md:h-8 w-full mt-10 justify-between font-lexend text-light">
         <img
           className="h-10"
           alt="deesignal-logo"
